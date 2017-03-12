@@ -1,0 +1,237 @@
+@import "base";
+@import "components";
+@import "header";
+@import "main";
+@import "media-queries";
+//
+//#myMenu {
+//	position: fixed;
+//	right:0;
+//	top:0;
+//  width: 50px;
+//	z-index: 100;
+//	list-style: none;
+//	text-align: left;
+//	height: 100%;
+//	background-color: #222424;
+//  transition: all .2s ease-out;
+//
+//  &:hover {
+//    width: 205px;
+//    transition: all .2s ease-out;
+//  }
+//
+//  &:hover .menu-title {
+//  //display: block;
+//  vertical-align: middle
+//  }
+//
+//  li {
+//    border-top: 1px solid $color-lite-gray;
+//    border-bottom: 1px solid $color-lite-gray;
+//    position: relative;
+//  }
+//
+//  .menu-logo {
+//    margin: 3px 3px 17px 0;
+//    text-align: right;
+//  }
+//
+//	a {
+//	display: table;
+//	text-decoration: none;
+//	margin-left: 15px;
+//    height: 42px;
+//    vertical-align: middle;
+//	color: #656565;
+//	}
+//
+//	.active {
+//		background: #666;
+//		background: rgba(0,0,0, 0.5);
+//	    color: #fff;
+//
+//	    a {
+//	    	color: #b2b2b2;
+//	    }
+//	}
+//  .menu-title {
+//    display: none;
+//    padding-top: 14px;
+//    //transition: all .5s ease-out;
+//  }
+//
+//  .menu-icon {
+//    position: absolute;
+//    top: 50%;
+//    right: 15px;
+//    margin-top: -10px;
+//    width: 21px;
+//    height: 20px;
+//    text-align: center;
+//  }
+//
+//  .menu-icon-1,
+//  .menu-icon-2,
+//  .menu-icon-3,
+//  .menu-icon-4 {
+//    background-repeat: no-repeat;
+//    background-position: 50% 50%;
+//  }
+//
+//  .menu-icon-1 {
+//    background-image: url('../img/menu-icon-1.png');
+//  }
+//
+//  .menu-icon-2 {
+//    background-image: url('../img/menu-icon-2.png');
+//  }
+//
+//  .menu-icon-3 {
+//    background-image: url('../img/menu-icon-3.png');
+//  }
+//
+//  .menu-icon-4 {
+//    background-image: url('../img/menu-icon-4.png');
+//  }
+//
+//  &.menu-open {
+//    width: 205px;
+//  }
+//
+//  &.menu-open .menu-title {
+//  display: table-cell;
+//  vertical-align: middle
+//  }
+//}
+//
+//.fp-scrollable {
+//  height: 100%;
+//}
+//
+//.section {
+//  position: relative;
+//  //padding-bottom: 110px;
+//  background-attachment: fixed;
+//  background-position: 50% 50%;
+//  background-repeat: no-repeat;
+//  transition-timing-function: cubic-bezier(.14,1.15,.94,.65);
+//}
+//
+//.step {
+//	width: 100%;
+//	position: absolute;
+//	bottom: 50px;
+//	left: 0;
+//	height: 61px;
+//
+//	&-button {
+//		width: 80px;
+//		height: 61px;
+//		margin: 0 auto;
+//		padding-top: 10px;
+//		background-position: 50% 50%;
+//		background-repeat: no-repeat;
+//		cursor: pointer;
+//
+//		&_name {
+//			font-size: 18px;
+//			line-height: 20px;
+//			text-align: center;
+//			color: #fff;
+//		}
+//	}
+//
+//	&-orange {
+//		background-image: url("../img/step.png");
+//	}
+//	&-darkblue {
+//		background-image: url("../img/step-2.png");
+//	}
+//}
+//
+//.slide-icon {
+//   position: absolute;
+//}
+//
+//
+//#section1 {
+//	background-image: url("../img/slide-1.jpg");
+//}
+//
+//
+//#section2 {
+//	// background-image: url("../img/slide-2.jpg");
+//  background-color: #f6652e;
+//
+//  label {
+//    margin-right: 95px;
+//  }
+//
+//  label:last-child {
+//    margin: 0;
+//  }
+//}
+//.slide-icon-2 {
+//  top: 16%;
+//  left: 50%;
+//  margin-left: -298px;
+//}
+//.slide-title-scenario {
+//  position: relative;
+//  top: 43%;
+//}
+//
+////section 3
+//#section3 {
+//  background-image: url("../img/slide-bg-3.jpg");
+//
+//  label {
+//    margin-bottom: 9px;
+//  }
+//}
+//
+//.slide-icon-3 {
+//  top: 14%;
+//  left: 50%;
+//  margin-left: -345px;
+//}
+//
+//.slide-title-product {
+//  top: 48%;
+//}
+//
+//.product-left,
+//.product-right {
+//  box-sizing: border-box;
+//  width: 50%;
+//  margin-top: 47%;
+//}
+//
+//.product-left {
+//  float: left;
+//}
+//
+//.product-right {
+//  float: right;
+//  padding-left: 16px;
+//}
+//
+////section4
+//
+//#section4 {
+//	background-image: url("../img/slide-4.jpg");
+//}
+//
+//
+//.section-wrap {
+//  width: 960px;
+//  height: 100%;
+//  margin:0 auto;
+//
+//  &::after {
+//    content: '';
+//    display: table;
+//    clear: both;
+//  }
+//}
