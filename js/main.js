@@ -122,3 +122,55 @@ $(document).ready(function () {
     });
 
 });
+
+// прокрутка слайдов
+
+var anchors = [];
+var currentAnchor = -1;
+var isAnimating  = false;
+
+$(function(){
+
+    function updateAnchors() {
+        anchors = [];
+        $('.section').each(function(i, element){
+            anchors.push( $(element).offset().top );
+        });
+    }
+
+    $('body').on('mousewheel', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        if( isAnimating ) {
+            return false;
+        }
+        isAnimating  = true;
+        // Increase or reset current anchor
+        if( e.originalEvent.wheelDelta >= 0 ) {
+            currentAnchor--;
+        }else{
+            currentAnchor++;
+        }
+        if( currentAnchor > (anchors.length - 1)
+           || currentAnchor < 0 ) {
+            currentAnchor = 0;
+        }
+        isAnimating  = true;
+        $('html, body').animate({
+            scrollTop: parseInt( anchors[currentAnchor] )
+        }, 500, 'swing', function(){
+            isAnimating  = false;
+        });
+    });
+
+    updateAnchors();
+
+});
+
+/*
+Как на счет такого алгоритма:
+После загрузки документа составляем массив из якорей и их смещения от верха страницы. Отдельную переменную для активного якоря заготавливаем.
+Прицепляемся на resize окна и обюновляем значения
+По scroll ставим флаг, начинаем анимировать scrollTop до соотв. якоря. По окончании анимации флаг снимаем.
+Если скролл вызывается еще раз, а флаг не сброшен - ничего не делаем.
+*/
