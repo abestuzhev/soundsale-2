@@ -1,5 +1,43 @@
 $(document).ready(function () {
 
+  var $accentTemplate = $(
+         '<div class="accent-letter_item">' +
+         '<input id="accent-letter_radio-1" type="radio" name="accent">' +
+         '<label for="accent-letter_radio-1" class="accent-letter_radio"></label>' +
+         '<input type="text" class="accent-letter_input">' +
+         '</div>'
+     );
+
+     $(".accent-letter_add-letter").click(function(e){
+         e.preventDefault();
+        //  var listLenght= $('.accent-letter_list').length();
+        //  var $accentTemplate;
+        //  for(var i=5; i <= listLenght; i++) {
+        //      $accentTemplate = $(
+        //          '<div class="accent-letter_item">' +
+        //          '<input id="accent-letter_radio- + i" type="radio" name="accent">' +
+        //          '<label for="accent-letter_radio- + i" class="accent-letter_radio"></label>' +
+        //          '<input type="text" class="accent-letter_input">' +
+        //          '</div>'
+        //      );
+        //  };
+
+         console.log($accentTemplate);
+         $('.accent-letter_list').append($accentTemplate);
+     });
+
+     $(".accent-letter_input").keypress(function() {
+         $(this).parent().next().find('.accent-letter_input').focus();
+
+     });
+
+ //
+     $('.accent-letter_input').mask('*', {'translation': {
+         "*": {pattern: /[^]/}
+ //        Я: {pattern: /[А-Яа-я]/}
+     }
+     });
+
 //плавный якорь
 //     function scrollToAnchor (elem) {
 //         $(elem).on("click", function (event) {
@@ -18,7 +56,7 @@ $(document).ready(function () {
             var id  = $(this).attr('href'),
                 top = $(id).offset().top;
             console.log(top);
-            $('body').animate({scrollTop: top}, 800);
+            $('body').animate({scrollTop: top}, 500);
         });
     }
     scrollToAnchor(".c-arrow-down");
@@ -84,4 +122,3 @@ $(document).ready(function () {
     });
 
 });
-
