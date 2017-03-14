@@ -1,15 +1,15 @@
 $(document).ready(function () {
 
-  var $accentTemplate = $(
-         '<div class="accent-letter_item">' +
-         '<input id="accent-letter_radio-1" type="radio" name="accent">' +
-         '<label for="accent-letter_radio-1" class="accent-letter_radio"></label>' +
-         '<input type="text" class="accent-letter_input">' +
-         '</div>'
-     );
+    var $accentTemplate = $(
+        '<div class="accent-letter_item">' +
+        '<input id="accent-letter_radio-1" type="radio" name="accent">' +
+        '<label for="accent-letter_radio-1" class="accent-letter_radio"></label>' +
+        '<input type="text" class="accent-letter_input">' +
+        '</div>'
+    );
 
-     $(".accent-letter_add-letter").click(function(e){
-         e.preventDefault();
+    $(".accent-letter_add-letter").click(function(e){
+        e.preventDefault();
         //  var listLenght= $('.accent-letter_list').length();
         //  var $accentTemplate;
         //  for(var i=5; i <= listLenght; i++) {
@@ -22,21 +22,21 @@ $(document).ready(function () {
         //      );
         //  };
 
-         console.log($accentTemplate);
-         $('.accent-letter_list').append($accentTemplate);
-     });
+        console.log($accentTemplate);
+        $('.accent-letter_list').append($accentTemplate);
+    });
 
-     $(".accent-letter_input").keypress(function() {
-         $(this).parent().next().find('.accent-letter_input').focus();
+    $(".accent-letter_input").keypress(function() {
+        $(this).parent().next().find('.accent-letter_input').focus();
 
-     });
+    });
 
- //
-     $('.accent-letter_input').mask('*', {'translation': {
-         "*": {pattern: /[^]/}
- //        Я: {pattern: /[А-Яа-я]/}
-     }
-     });
+    //
+    $('.accent-letter_input').mask('*', {'translation': {
+        "*": {pattern: /[^]/}
+        //        Я: {pattern: /[А-Яа-я]/}
+    }
+    });
 
 //плавный якорь
 //     function scrollToAnchor (elem) {
@@ -152,7 +152,7 @@ $(function(){
             currentAnchor++;
         }
         if( currentAnchor > (anchors.length - 1)
-           || currentAnchor < 0 ) {
+            || currentAnchor < 0 ) {
             currentAnchor = 0;
         }
         isAnimating  = true;
@@ -165,12 +165,123 @@ $(function(){
 
     updateAnchors();
 
+    function come(elem) {
+        var docViewTop = $(window).scrollTop(),
+            docViewBottom = docViewTop + $(window).height(),
+            elemTop = $(elem).offset().top,
+            elemBottom = elemTop + $(elem).height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    if (come(".section-incidental")) {
+        $("body").off("mousewheel");
+    }
+
+    function disable() {
+        $("body").off('mousewheel');
+        // document.removeEventListener('mousewheel');
+        // document.removeEventListener('DOMMouseScroll');
+    }
+
+    function enable() {
+        $("body").on('mousewheel');
+        // document.addEventListener('mousewheel');
+        // document.addEventListener('DOMMouseScroll');
+    }
+
+    // function stopMousewheel (target) {
+    //     var target = $(target);
+    //     var targetPos = target.offset().top;
+    //     var winHeight = $(window).height();
+    //     var scrollToElem = targetPos - winHeight;
+    //     $(window).scroll(function(){
+    //         var winScrollTop = $(this).scrollTop();
+    //         if(winScrollTop > scrollToElem){
+    //             console.log("стоп блок");
+    //             disable();
+    //         }
+    //     });
+    // }
+
+    function stopMousewheel (target) {
+        var target = $(target);
+        var targetPos = target.offset().top;
+        var winHeight = $(window).height();
+        var scrollToElem = targetPos - winHeight;
+        $(window).scroll(function(){
+            var winScrollTop = $(this).scrollTop();
+            if(winScrollTop > scrollToElem){
+                console.log("старт блок");
+                enable();
+            } else if (winScrollTop < scrollToElem){
+                console.log("стоп блок");
+                disable();
+            }
+        });
+    }
+
+    stopMousewheel(".section-incidental");
+    // startMousewheel(".section");
+
+
 });
 
 /*
-Как на счет такого алгоритма:
-После загрузки документа составляем массив из якорей и их смещения от верха страницы. Отдельную переменную для активного якоря заготавливаем.
-Прицепляемся на resize окна и обюновляем значения
-По scroll ставим флаг, начинаем анимировать scrollTop до соотв. якоря. По окончании анимации флаг снимаем.
-Если скролл вызывается еще раз, а флаг не сброшен - ничего не делаем.
-*/
+ Как на счет такого алгоритма:
+ После загрузки документа составляем массив из якорей и их смещения от верха страницы. Отдельную переменную для активного якоря заготавливаем.
+ Прицепляемся на resize окна и обюновляем значения
+ По scroll ставим флаг, начинаем анимировать scrollTop до соотв. якоря. По окончании анимации флаг снимаем.
+ Если скролл вызывается еще раз, а флаг не сброшен - ничего не делаем.
+ */
+
+
+
+// document.getElementById("enable").onclick = function() {
+//     enableScroll();
+//     document.getElementById("status").innerHTML = "enabled";
+//     document.getElementById("status").className = "enabled";
+// };
+//
+// document.getElementById("disable").onclick = function() {
+//     disableScroll();
+//     document.getElementById("status").innerHTML = "disabled";
+//     document.getElementById("status").className = "disabled";
+// };
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+    e = e || window.event;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+    if (window.addEventListener) // older FF
+        window.addEventListener('DOMMouseScroll', preventDefault, false);
+    window.onwheel = preventDefault; // modern standard
+    window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+    window.ontouchmove  = preventDefault; // mobile
+    document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null;
+    window.onwheel = null;
+    window.ontouchmove = null;
+    document.onkeydown = null;
+}
+
