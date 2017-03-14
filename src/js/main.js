@@ -145,7 +145,6 @@ $(function(){
             return false;
         }
         isAnimating  = true;
-        // Increase or reset current anchor
         if( e.originalEvent.wheelDelta >= 0 ) {
             currentAnchor--;
         }else{
@@ -165,29 +164,24 @@ $(function(){
 
     updateAnchors();
 
-    function come(elem) {
-        var docViewTop = $(window).scrollTop(),
-            docViewBottom = docViewTop + $(window).height(),
-            elemTop = $(elem).offset().top,
-            elemBottom = elemTop + $(elem).height();
-
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
-
-    if (come(".section-incidental")) {
-        $("body").off("mousewheel");
-    }
-
+    // function come(elem) {
+    //     var docViewTop = $(window).scrollTop(),
+    //         docViewBottom = docViewTop + $(window).height(),
+    //         elemTop = $(elem).offset().top,
+    //         elemBottom = elemTop + $(elem).height();
+    //
+    //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    // }
+    //
+    // if (come(".section-incidental")) {
+    //     $("body").off("mousewheel");
+    // }
+    //
     function disable() {
         $("body").off('mousewheel');
-        // document.removeEventListener('mousewheel');
-        // document.removeEventListener('DOMMouseScroll');
     }
-
     function enable() {
         $("body").on('mousewheel');
-        // document.addEventListener('mousewheel');
-        // document.addEventListener('DOMMouseScroll');
     }
 
     // function stopMousewheel (target) {
@@ -204,28 +198,93 @@ $(function(){
     //     });
     // }
 
-    function stopMousewheel (target) {
-        var target = $(target);
-        var targetPos = target.offset().top;
-        var winHeight = $(window).height();
-        var scrollToElem = targetPos - winHeight;
-        $(window).scroll(function(){
-            var winScrollTop = $(this).scrollTop();
-            if(winScrollTop > scrollToElem){
-                console.log("старт блок");
-                enable();
-            } else if (winScrollTop < scrollToElem){
-                console.log("стоп блок");
-                disable();
-            }
-        });
-    }
-
-    stopMousewheel(".section-incidental");
+    // function stopMousewheel (target) {
+    //     var target = $(target);
+    //     var targetPos = target.offset().top;
+    //     var winHeight = $(window).height();
+    //     var scrollToElem = targetPos - winHeight;
+    //     $(window).scroll(function(){
+    //         var winScrollTop = $(this).scrollTop();
+    //         if(winScrollTop > scrollToElem){
+    //             console.log("блокирует");
+    //             disable();
+    //         } else if (winScrollTop < scrollToElem){
+    //             console.log("разблокирует");
+    //             enable();
+    //         }
+    //     });
+    // }
+    //
+    // stopMousewheel(".section-incidental");
     // startMousewheel(".section");
 
+});// end $(function(){
+
+
+// определение координат блока
+// функция проверки полной видимости элемента
+function checkPosition(example){
+  // координаты дива
+  var div_position = $(example).offset();
+  // отступ сверху
+  var div_top = div_position.top;
+  // отступ слева
+  var div_left = div_position.left;
+  // ширина
+  var div_width = $(example).width();
+  // высота
+  var div_height = $(example).height();
+
+  // проскроллено сверху
+  var top_scroll = $(document).scrollTop();
+  // проскроллено слева
+  var left_scroll = $(document).scrollLeft();
+  // ширина видимой страницы
+  var screen_width = $(window).width();
+  // высота видимой страницы
+  var screen_height = $(window).height();
+
+  // координаты углов видимой области
+  var see_x1 = left_scroll;
+  var see_x2 = screen_width + left_scroll;
+  var see_y1 = top_scroll;
+  var see_y2 = screen_height + top_scroll;
+
+  // координаты углов искомого элемента
+  var div_x1 = div_left;
+  var div_x2 = div_left + div_height;
+  var div_y1 = div_top;
+  var div_y2 = div_top + div_width;
+
+  // проверка - виден див полностью или нет
+  if( div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2 ){
+      // если виден
+      // $(example).css({'overflow-y': 'scroll'});
+      disable();
+  }else{
+      // если не виден
+      // $(example).css({'overflow': 'visible'});
+      enable();
+  }
+}
+
+
+$(document).ready(function(){
+$(document).scroll(function(){
+    // при скролле страницы делаем проверку
+    checkPosition(".slide-incidental");
+});
+
+// после загрузки страницы сразу проверяем
+checkPosition(".slide-incidental");
+
+// проверка при масштабировании и изменении размера страницы
+$(window).resize(function(){
+    checkPosition(".slide-incidental");
+});
 
 });
+
 
 /*
  Как на счет такого алгоритма:
@@ -284,4 +343,3 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
-
