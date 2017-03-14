@@ -197,24 +197,27 @@ function addMousewheel() {
       var div_x2 = div_left + div_height;
       var div_y1 = div_top;
       var div_y2 = div_top + div_width;
+      console.log(div_x1, div_x2, div_y1, div_y2 );
       // проверка - виден див полностью или нет
       if( div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2 ){
           // если виден
 
           $("body").off("mousewheel");
-          console.log("блок")
+          console.log("блок");
+
+          return false;
 
       }else{
           // если не виден
           addMousewheel();
-          console.log("попадание")
+          console.log("дальше");
       }
-    }
+    }// checkPosition
 
     $(document).scroll(function(){
         // при скролле страницы делаем проверку
         checkPosition(".section-incidental_flag");
-        // checkPosition(".section-information_flag");
+        checkPosition(".section-information_flag");
     });
 
     // после загрузки страницы сразу проверяем
