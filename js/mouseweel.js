@@ -43,7 +43,14 @@ function addMousewheel() {
     addMousewheel();
     updateAnchors();
 
+    $(".section-incidental").bind("mousewheel", function() {
+        return false;
+    });
 
+    $(".section-information").bind("mousewheel", function() {
+        return false;
+    });
+/*
 
     // определение координат блока
     // функция проверки полной видимости элемента
@@ -109,5 +116,6 @@ function addMousewheel() {
     // $(window).resize(function(){
     //     checkPosition(".section-incidental_flag");
     // });
+    */
 
 });// end $(function(){

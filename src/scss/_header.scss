@@ -248,6 +248,23 @@
     clear: both;
   }
 
+  &_mobile {
+    position: absolute;
+    z-index: 9999;
+    left: 20px;
+    top: 20px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+
+    &-line {
+      width: 100%;
+      height: 4px;
+      margin: 6px 0;
+      background-color: #000;
+    }
+  }
+
   .horizontal-logo {
     width: 52px;
     height: 52px;

@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+  $(".horizontal-nav_mobile").click(function(){
+    $(".horizontal-nav").toggleClass("js-show");
+  });
+
     var $accentTemplate = $(
         '<div class="accent-letter_item">' +
         '<input id="accent-letter_radio-1" type="radio" name="accent">' +

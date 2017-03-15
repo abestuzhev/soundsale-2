@@ -43,7 +43,6 @@
     left: auto;
   }
 
-
   .slide-chronometry,
   .slide-incidental,
   .slide-accent,
@@ -53,6 +52,10 @@
   }
 
 }
+
+
+
+
 
 @media all and (max-width: 1100px) {
   .horizontal-nav .container-layout {
@@ -65,25 +68,41 @@
   }
 }
 
+
+
+
 @media all and (max-width: 980px) {
 
-  .slide-menu,
-  .slide-scenario,
-  .slide-view,
   .slide-type,
   .slide-chronometry,
   .slide-form-style,
   .slide-incidental,
   .slide-accent,
-  .slide-output,
   .slide-law {
     width: 100%;
     position: static;
     transform: none;
   }
 
+
+  .slide-menu,
+  .slide-scenario,
+  .slide-view,
+  .slide-output {
+    width: 100%;
+  }
+
   .horizontal-nav .horizontal-logo {
     margin-right: 10px;
+  }
+
+  .horizontal-nav .container-layout {
+      width: auto;
+      margin: 0 20px;
+  }
+
+  .horizontal-menu {
+
   }
 
   .contact_footer .footer-menu {
@@ -125,7 +144,7 @@
   }
 
   .section-scenario .grid_column {
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .c-label {
@@ -150,7 +169,83 @@
   }
 }
 
+
+
+
+
+@media all and (max-width: 920px) {
+  .horizontal-logo {
+    display: none;
+  }
+
+  .horizontal-nav .horizontal-menu,
+  .horizontal-nav .horizontal-entry {
+    display: inline-block;
+    float: none;
+  }
+
+  .horizontal-nav .horizontal-menu_link {
+    padding: 7px 5px;
+  }
+
+  .horizontal-entry {
+
+
+  }
+}
+
+
+
+
+
+@media all and (max-width: 855px) {
+  .horizontal-nav_mobile {
+    display: block;
+  }
+
+  .horizontal-nav {
+    display: none;
+    padding: 17px 0;
+    width: auto;
+    border-bottom-right-radius: 40px;
+  }
+
+  .horizontal-nav .container-layout {
+    padding-right: 0;
+  }
+
+  .horizontal-menu {
+    margin-left: 20px;
+  }
+
+  .horizontal-nav .horizontal-menu_item {
+    display: block;
+  }
+
+  .horizontal-nav .horizontal-entry {
+    position: absolute;
+    top: 67px;
+    left: 20px;
+    padding: 0;
+    padding-top: 23px;
+  }
+
+  .horizontal-nav .horizontal-entry::before {
+    left: 8px;
+    top: 0;
+  }
+}
+
+
+
+
 @media all and (max-width: 800px) {
+  .slide-output {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
   .section .grid .grid_column {
     display: block;
     width: 100%;
@@ -164,5 +259,13 @@
 
   .c-label {
     display: block;
+  }
+
+  .slide-type .grid_column:first-child {
+    text-align: left;
+  }
+
+  .section-form-style .load-style {
+    width: 100%;
   }
 }
