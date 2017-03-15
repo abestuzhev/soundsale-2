@@ -971,3 +971,20 @@
 .SumoSelect.open > .optWrapper {
   top: 48px;
 }
+
+.slide-menu,
+.slide-scenario,
+.slide-view,
+.slide-type,
+.slide-chronometry,
+.slide-form-style,
+.slide-incidental,
+.slide-accent,
+.slide-output,
+.slide-law {
+  width: 980px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

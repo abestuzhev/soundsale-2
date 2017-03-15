@@ -1,16 +1,28 @@
 @media all and (max-width: 1367px) {
   .section_img img{
-    width: 57%;
+    width: 78%;
   }
 
   .slide-form-style .section_img img {
-    width: 18%;
+    width: 35%;
   }
   .slide-scenario .section_img img {
     width: 70%;
   }
   .slide-accent .section_img img {
-    width: 34%;
+    width: 45%;
+  }
+
+  .section-view .section_img img {
+    width: 70%;
+  }
+
+  .section-type .section_img img {
+    width: 60%;
+  }
+
+  .section-incidental .section_img {
+    display: none;
   }
 
   .section_title {
@@ -19,7 +31,7 @@
 
   //#type .c-arrow-down,
   #chronometry .c-arrow-down,
-  #style .c-arrow-down,
+  // #style .c-arrow-down,
   #incidental .c-arrow-down,
   #accent .c-arrow-down,
   #law .c-arrow-down {
@@ -31,15 +43,43 @@
     left: auto;
   }
 
+
+  .slide-chronometry,
+  .slide-incidental,
+  .slide-accent,
+  .slide-law {
+    position: static;
+    transform: none;
+  }
+
 }
 
-
-
-@media all and (max-width: 980px) {
-
+@media all and (max-width: 1100px) {
+  .horizontal-nav .container-layout {
+    width: auto;
+    margin: 0 54px;
+  }
 
   .horizontal-nav .horizontal-menu_link {
     padding: 24px 5px;
+  }
+}
+
+@media all and (max-width: 980px) {
+
+  .slide-menu,
+  .slide-scenario,
+  .slide-view,
+  .slide-type,
+  .slide-chronometry,
+  .slide-form-style,
+  .slide-incidental,
+  .slide-accent,
+  .slide-output,
+  .slide-law {
+    width: 100%;
+    position: static;
+    transform: none;
   }
 
   .horizontal-nav .horizontal-logo {
@@ -75,6 +115,7 @@
 
   .container-layout {
     width: 100%;
+    padding-left: 25px;
     padding-right: 50px;
   }
 
@@ -106,5 +147,22 @@
 
   .c-card-works .player-layout {
     width: 400px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .section .grid .grid_column {
+    display: block;
+    width: 100%;
+  }
+
+  .grid {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .c-label {
+    display: block;
   }
 }
