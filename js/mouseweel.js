@@ -43,14 +43,14 @@ function addMousewheel() {
     addMousewheel();
     updateAnchors();
 
-    $(".section-incidental").bind("mousewheel", function() {
-        return false;
-    });
+    // $(".section-incidental").bind("mousewheel", function() {
+    //     return false;
+    // });
 
-    $(".section-information").bind("mousewheel", function() {
-        return false;
-    });
-/*
+    // $(".section-information").bind("mousewheel", function() {
+    //     return false;
+    // });
+
 
     // определение координат блока
     // функция проверки полной видимости элемента
@@ -91,20 +91,21 @@ function addMousewheel() {
           // если виден
 
           $("body").off("mousewheel");
+
           console.log("блок");
 
-          return false;
+
 
       }else{
           // если не виден
-          addMousewheel();
-          console.log("дальше");
+          // addMousewheel();
+          console.log("добавление body mousewheel");
       }
     }// checkPosition
 
     $(document).scroll(function(){
         // при скролле страницы делаем проверку
-        checkPosition(".section-incidental_flag");
+        checkPosition(".section-chronometry_flag");
         // checkPosition(".section-information_flag");
     });
 
@@ -116,6 +117,12 @@ function addMousewheel() {
     // $(window).resize(function(){
     //     checkPosition(".section-incidental_flag");
     // });
-    */
+
+
+    $(".logo").click(function(){
+      if(top === 0) {
+        addMousewheel();
+      }
+    });
 
 });// end $(function(){

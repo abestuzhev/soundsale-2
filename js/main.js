@@ -43,10 +43,11 @@ $(document).ready(function () {
     });
 
 //плавный якорь
+var top;
     function scrollToAnchor (elem) {
         $(elem).on("click", function (event) {
             event.preventDefault();
-            var id  = $(this).attr('href'),
+            var id  = $(this).attr('href');
                 top = $(id).offset().top;
             console.log(top);
             $('body').animate({scrollTop: top}, 500);
@@ -55,6 +56,8 @@ $(document).ready(function () {
     scrollToAnchor(".c-arrow-down");
     scrollToAnchor(".vertical-menu_link");
     scrollToAnchor(".logo a");
+
+  
 
 
     // активные пункты меню

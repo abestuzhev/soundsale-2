@@ -46,7 +46,8 @@
   .slide-chronometry,
   .slide-incidental,
   .slide-accent,
-  .slide-law {
+  .slide-law,
+  .slide-form-style {
     position: static;
     transform: none;
   }
@@ -66,12 +67,27 @@
   .horizontal-nav .horizontal-menu_link {
     padding: 24px 5px;
   }
+
+  // .slide-form-style {
+  //   position: static;
+  //   transform: none;
+  // }
+
+
+  #style .c-arrow-down {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    left: auto;
+  }
 }
 
 
 
 
-@media all and (max-width: 980px) {
+@media all and (max-width: 995px) {
 
   .slide-type,
   .slide-chronometry,
@@ -167,6 +183,27 @@
   .c-card-works .player-layout {
     width: 400px;
   }
+
+  .section-scenario .grid_column {
+    width: auto;
+  }
+
+
+  // .section-view .grid .grid_column {
+  //   display: block;
+  //   width: 100%;
+  // }
+  
+  .section-view .c-label {
+    display: block;
+  }
+
+
+  // .section-view .grid {
+  //   width: 75%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
 }
 
 
@@ -240,16 +277,16 @@
 
 
 @media all and (max-width: 800px) {
-  .slide-output {
-    width: 100%;
-    position: static;
-    transform: none;
-  }
 
   .section .grid .grid_column {
     display: block;
     width: 100%;
   }
+
+  .c-label {
+    display: block;
+  }
+
 
   .grid {
     width: 75%;
@@ -257,8 +294,10 @@
     margin-right: auto;
   }
 
-  .c-label {
-    display: block;
+  .slide-output {
+    width: 100%;
+    position: static;
+    transform: none;
   }
 
   .slide-type .grid_column:first-child {
@@ -266,6 +305,10 @@
   }
 
   .section-form-style .load-style {
+    width: 100%;
+  }
+
+  .section-output .section_img img {
     width: 100%;
   }
 }
