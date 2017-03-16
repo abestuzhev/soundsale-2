@@ -114,6 +114,7 @@
   background-color: #222424;
   //transform: translateX(52px);
   transition: all .08s ease-out;
+  // display: none;
   //
   // &:hover {
   //   width: 205px;
@@ -232,7 +233,7 @@
 //horizontal-nav
 //******************************
 .horizontal-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 998;
@@ -241,6 +242,7 @@
   box-shadow: 1px 1.7px 7px rgba(0, 0, 0, 0.15);
   // transform: translateY(-64px);
   transition: all .08s ease-out;
+  // display: none;
 
   &::after {
     content: '';

@@ -122,7 +122,8 @@ input[placeholder] {
 
 .section-incidental_flag,
 .section-information_flag,
-.section-chronometry_flag {
+.section-chronometry_flag,
+.section-scenario_flag {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -139,7 +140,7 @@ input[placeholder] {
   left: 50%;
   margin-left: -40px;
   cursor: pointer;
-  z-index: 999; }
+  z-index: 98; }
   .c-arrow-down_text, .c-arrow-down_number {
     position: absolute;
     text-align: center;
@@ -744,7 +745,7 @@ input[placeholder] {
   background-image: url("../img/icon-info.png"); }
 
 .horizontal-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 998;

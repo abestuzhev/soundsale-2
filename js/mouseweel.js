@@ -43,6 +43,13 @@ function addMousewheel() {
     addMousewheel();
     updateAnchors();
 
+    $(window).resize(function(){
+      var height_window = $(window).height();
+      if(height_window < 915) {
+        
+      }
+    });
+
     // $(".section-incidental").bind("mousewheel", function() {
     //     return false;
     // });
@@ -91,11 +98,7 @@ function addMousewheel() {
           // если виден
 
           $("body").off("mousewheel");
-
           console.log("блок");
-
-
-
       }else{
           // если не виден
           // addMousewheel();
@@ -124,5 +127,38 @@ function addMousewheel() {
         addMousewheel();
       }
     });
+
+    function showMenu(example){
+      var div_position = $(example).offset();
+      var div_top = div_position.top;
+      var div_left = div_position.left;
+      var div_width = $(example).width();
+      var div_height = $(example).height();
+      var top_scroll = $(document).scrollTop();
+      var left_scroll = $(document).scrollLeft();
+      var screen_width = $(window).width();
+      var screen_height = $(window).height();
+      var see_x1 = left_scroll;
+      var see_x2 = screen_width + left_scroll;
+      var see_y1 = top_scroll;
+      var see_y2 = screen_height + top_scroll;
+      var div_x1 = div_left;
+      var div_x2 = div_left + div_height;
+      var div_y1 = div_top;
+      var div_y2 = div_top + div_width;
+      if( div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2 ){
+          // если виден
+          $(".horizontal-nav").css("display", "block");
+          $(".vertical-nav-nav").css("display", "block");
+          console.log("привет второй блок");
+      }else{
+      }
+    }// showMenu
+
+    $(document).scroll(function(){
+        showMenu(".section-scenario_flag");
+    });
+    showMenu(".section-scenario_flag");
+
 
 });// end $(function(){
