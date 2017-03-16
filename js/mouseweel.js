@@ -12,7 +12,12 @@ $(function(){
           anchors.push( $(element).offset().top );
       });
       console.log(anchors);
+      // $('body').animate({scrollTop: top}, 500);
   }
+
+  // $(".c-arrow-down").click(function(){
+  //   updateAnchors();
+  // });
 
 function addMousewheel() {
   $('body').on('mousewheel', function(e){
@@ -36,6 +41,8 @@ function addMousewheel() {
           scrollTop: parseInt( anchors[currentAnchor] )
       }, 500, 'swing', function(){
           isAnimating  = false;
+
+          
       });
   });
 }
@@ -46,7 +53,7 @@ function addMousewheel() {
     $(window).resize(function(){
       var height_window = $(window).height();
       if(height_window < 915) {
-        
+
       }
     });
 

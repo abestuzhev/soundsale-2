@@ -79,7 +79,7 @@ var top;
     scrollToAnchor(".vertical-menu_link");
     scrollToAnchor(".logo a");
 
-
+    
 
 
     // активные пункты меню
