@@ -4,43 +4,65 @@ $(document).ready(function () {
     $(".horizontal-nav").toggleClass("js-show");
   });
 
-    var $accentTemplate = $(
-        '<div class="accent-letter_item">' +
-        '<input id="accent-letter_radio-1" type="radio" name="accent">' +
-        '<label for="accent-letter_radio-1" class="accent-letter_radio"></label>' +
-        '<input type="text" class="accent-letter_input">' +
-        '</div>'
-    );
 
+// var count;
+// $(".accent-letter_radio").each(function(index){
+//   count = index + 1;
+//   console.log(count);
+// });
+
+
+
+
+
+
+
+//добавление буквы
     $(".accent-letter_add-letter").click(function(e){
         e.preventDefault();
-        //  var listLenght= $('.accent-letter_list').length();
-        //  var $accentTemplate;
-        //  for(var i=5; i <= listLenght; i++) {
-        //      $accentTemplate = $(
-        //          '<div class="accent-letter_item">' +
-        //          '<input id="accent-letter_radio- + i" type="radio" name="accent">' +
-        //          '<label for="accent-letter_radio- + i" class="accent-letter_radio"></label>' +
-        //          '<input type="text" class="accent-letter_input">' +
-        //          '</div>'
-        //      );
-        //  };
+        var count = $(".accent-letter_item").length + 1;
+        // console.log(count);
+        var $accentTemplate = $(
+            '<div class="accent-letter_item">' +
+            '<input id="accent-letter_radio-' + count + '" type="radio" name="accent">' +
+            '<label for="accent-letter_radio-' + count + '" class="accent-letter_radio"></label>' +
+            '<input type="text" class="accent-letter_input">' +
+            '</div>'
+        );
+        // console.log($accentTemplate);
+        $('.accent-letter_list').append($accentTemplate).find('.accent-letter_input').focus();
 
-        console.log($accentTemplate);
-        $('.accent-letter_list').append($accentTemplate);
+
+        $('.accent-letter_item').on('change', function(){
+          //перескок на следующую букву
+          console.log("сработал change");
+          $(".accent-letter_input").keypress(function() {
+              $(this).parent().next().find('.accent-letter_input').focus();
+              $(this).mask('*', {'translation': {
+                  "*": {pattern: /[^]/}
+                  //        Я: {pattern: /[А-Яа-я]/}
+                }
+              });
+          });
+
+          //маска ввода
+
+        });
     });
+    // окончания скрипта добавления буквы
 
+    //перескок на следующию букву
     $(".accent-letter_input").keypress(function() {
         $(this).parent().next().find('.accent-letter_input').focus();
-
+        $('.accent-letter_input').mask('*', {'translation': {
+            "*": {pattern: /[^]/}
+            //        Я: {pattern: /[А-Яа-я]/}
+          }
+        });
     });
 
-    //
-    $('.accent-letter_input').mask('*', {'translation': {
-        "*": {pattern: /[^]/}
-        //        Я: {pattern: /[А-Яа-я]/}
-    }
-    });
+    //маска ввода
+
 
 //плавный якорь
 var top;
@@ -57,7 +79,7 @@ var top;
     scrollToAnchor(".vertical-menu_link");
     scrollToAnchor(".logo a");
 
-  
+
 
 
     // активные пункты меню
