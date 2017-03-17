@@ -694,10 +694,10 @@
   padding-bottom: 81px;
   min-height: 100%;
 
-  .horizontal-nav {
-    position: static;
-    transform: translateY(0);
-  }
+  // .horizontal-nav {
+  //   position: static;
+  //   transform: translateY(0);
+  // }
 
   &-main {
     padding-top: 106px;
@@ -844,11 +844,6 @@
     .section_title {
       color: #1C3344;
     }
-  }
-
-  .horizontal-nav {
-    position: static;
-    transform: translateY(0);
   }
 
   &-footer {

@@ -2,19 +2,8 @@ $(document).ready(function () {
 
   $(".horizontal-nav_mobile").click(function(){
     $(".horizontal-nav").toggleClass("js-show");
+    $(this).toggleClass("js-show-shadow");
   });
-
-
-// var count;
-// $(".accent-letter_radio").each(function(index){
-//   count = index + 1;
-//   console.log(count);
-// });
-
-
-
-
-
 
 
 //добавление буквы
@@ -44,9 +33,7 @@ $(document).ready(function () {
                 }
               });
           });
-
           //маска ввода
-
         });
     });
     // окончания скрипта добавления буквы
@@ -60,40 +47,39 @@ $(document).ready(function () {
           }
         });
     });
-
     //маска ввода
 
 
 //плавный якорь
-var top;
-    function scrollToAnchor (elem) {
-        $(elem).on("click", function (event) {
-            event.preventDefault();
-            var id  = $(this).attr('href');
-                top = $(id).offset().top;
-            console.log(top);
-            $('body').animate({scrollTop: top}, 500);
-        });
-    }
-    scrollToAnchor(".c-arrow-down");
-    scrollToAnchor(".vertical-menu_link");
-    scrollToAnchor(".logo a");
+// var top;
+//     function scrollToAnchor (elem) {
+//         $(elem).on("click", function (event) {
+//             event.preventDefault();
+//             var id  = $(this).attr('href');
+//                 top = $(id).offset().top;
+//             console.log(top);
+//             $('body').animate({scrollTop: top}, 500);
+//         });
+//     }
+//     scrollToAnchor(".c-arrow-down");
+//     scrollToAnchor(".vertical-menu_link");
+//     scrollToAnchor(".logo a");
 
-    
+
 
 
     // активные пункты меню
-    $(".c-arrow-down").click(function(e){
-        e.preventDefault();
-        $(".vertical-menu .active").removeClass("active").next().addClass("active");
-    });
+    // $(".c-arrow-down").click(function(e){
+    //     e.preventDefault();
+    //     $(".vertical-menu .active").removeClass("active").next().addClass("active");
+    // });
 
-    $(".logo a").click(function(e){
-        e.preventDefault();
-        $(".vertical-menu_item").removeClass("active");
-    });
+    // $(".logo a").click(function(e){
+    //     e.preventDefault();
+    //     $(".vertical-menu_item").removeClass("active");
+    // });
 
-
+/*
 
     var lastId,
         topMenu = $("#top-menu"),
@@ -138,5 +124,7 @@ var top;
                 .end().filter("[href='#"+id+"']").parent().addClass("active");
         }
     });
+
+    */
 
 });

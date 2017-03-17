@@ -1,10 +1,11 @@
 // прокрутка слайдов
 
-var anchors = [];
-var currentAnchor = -1;
-var isAnimating  = false;
+// var anchors = [];
+// var currentAnchor = -1;
+// var isAnimating  = false;
 
 $(function(){
+  /*
 
   function updateAnchors() {
       anchors = [];
@@ -41,21 +42,19 @@ function addMousewheel() {
           scrollTop: parseInt( anchors[currentAnchor] )
       }, 500, 'swing', function(){
           isAnimating  = false;
-
-          
       });
   });
 }
 
-    addMousewheel();
     updateAnchors();
+    addMousewheel();
+    */
 
-    $(window).resize(function(){
-      var height_window = $(window).height();
-      if(height_window < 915) {
-
-      }
-    });
+    // $(window).resize(function(){
+    //   var height_window = $(window).height();
+    //   if(height_window < 915) {
+    //   }
+    // });
 
     // $(".section-incidental").bind("mousewheel", function() {
     //     return false;
@@ -65,7 +64,7 @@ function addMousewheel() {
     //     return false;
     // });
 
-
+/*
     // определение координат блока
     // функция проверки полной видимости элемента
     function checkPosition(example){
@@ -118,17 +117,17 @@ function addMousewheel() {
         checkPosition(".section-chronometry_flag");
         // checkPosition(".section-information_flag");
     });
-
     // после загрузки страницы сразу проверяем
     checkPosition(".section-incidental_flag");
     checkPosition(".section-information_flag");
-
     // проверка при масштабировании и изменении размера страницы
     // $(window).resize(function(){
     //     checkPosition(".section-incidental_flag");
     // });
 
+    */
 
+/*
     $(".logo").click(function(){
       if(top === 0) {
         addMousewheel();
@@ -166,6 +165,49 @@ function addMousewheel() {
         showMenu(".section-scenario_flag");
     });
     showMenu(".section-scenario_flag");
+*/
 
 
+
+var menu_selector = ".vertical-menu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+
+function onScroll(){
+    var scroll_top = $(document).scrollTop();
+    $(menu_selector + " a").each(function(){
+        var hash = $(this).attr("href");
+        var target = $(hash);
+        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+            $(menu_selector + " .active").removeClass("active");
+            $(this).parents(".vertical-menu_item").addClass("active");
+        } else {
+          $(this).parents(".vertical-menu_item").removeClass("active");
+        }
+    });
+}
+
+$(document).ready(function () {
+
+    $(document).on("scroll", onScroll);
+
+    $(".vertical-menu_link, .c-arrow-down, .logo a").click(function(e){
+        e.preventDefault();
+        console.log(this);
+        $(document).off("scroll");
+        $(menu_selector + " .active").removeClass("active");
+        $(this).parents(".vertical-menu_item").addClass("active");
+        var hash = $(this).attr("href");
+        var target = $(hash);
+
+        console.log(hash);
+
+        $("html, body").stop().animate({
+            scrollTop: target.offset().top
+        }, 300, function(){
+            window.location.hash = hash;
+            $(document).on("scroll", onScroll);
+        });
+
+    });
+
+});
 });// end $(function(){

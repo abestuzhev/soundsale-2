@@ -120,6 +120,9 @@ input[placeholder] {
 .js-show {
   display: block !important; }
 
+.js-show-shadow {
+  box-shadow: none !important; }
+
 .section-incidental_flag,
 .section-information_flag,
 .section-chronometry_flag,
@@ -400,7 +403,7 @@ input[placeholder] {
     font-family: "Tahoma";
     font-size: 14px;
     font-weight: 400;
-    padding: 28px 44px 11px;
+    padding: 23px 44px 11px;
     position: absolute;
     top: -15px;
     right: 0px;
@@ -426,7 +429,7 @@ input[placeholder] {
   .c-card-works_info {
     display: none;
     position: relative;
-    top: -10px;
+    top: -16px;
     width: 100%;
     background-color: #FFF;
     border: 1px solid #C2C2C2;
@@ -682,7 +685,7 @@ input[placeholder] {
 
 .vertical-menu_item.active {
   background: #666;
-  background: #000;
+  background: #fda033;
   color: #fff; }
 
 .vertical-menu_link {
@@ -760,16 +763,20 @@ input[placeholder] {
   .horizontal-nav_mobile {
     position: fixed;
     z-index: 9999;
-    left: 20px;
+    left: 8px;
     top: 20px;
-    width: 30px;
     cursor: pointer;
-    display: none; }
+    display: none;
+    background-color: #F9F9F9;
+    border-radius: 50px;
+    padding: 10px 17px;
+    box-shadow: 0px 8px 14px -9px rgba(0, 0, 0, 0.4); }
     .horizontal-nav_mobile-line {
-      width: 100%;
+      width: 24px;
       height: 4px;
       margin: 6px 0;
-      background-color: #000; }
+      background-color: #000;
+      border-radius: 50px; }
   .horizontal-nav .horizontal-logo {
     width: 52px;
     height: 52px;
@@ -1299,11 +1306,6 @@ input[placeholder] {
   background-color: #14afbe;
   padding-bottom: 81px;
   min-height: 100%; }
-  .contact .horizontal-nav {
-    position: static;
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0); }
   .contact-main {
     padding-top: 106px; }
     .contact-main_img {
@@ -1398,11 +1400,6 @@ input[placeholder] {
     padding-top: 42px; }
     .works-main .section_title {
       color: #1C3344; }
-  .works .horizontal-nav {
-    position: static;
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0); }
   .works-footer {
     margin-top: -92px;
     height: 92px;
@@ -1645,13 +1642,33 @@ input[placeholder] {
     display: block; }
   .horizontal-nav .horizontal-entry {
     position: absolute;
-    top: 67px;
+    top: 78px;
     left: 20px;
     padding: 0;
     padding-top: 23px; }
   .horizontal-nav .horizontal-entry::before {
     left: 8px;
-    top: 0; } }
+    top: 0; }
+  /*works*/
+  .c-card-works_item:last-child {
+    display: block; }
+  .c-card-works {
+    padding: 6px; }
+  .c-card-works_passport {
+    display: block; }
+  .works-main .container-layout {
+    padding: 0; }
+  .c-card-works_passport-turn {
+    width: 100%;
+    top: 0px;
+    right: -1px; }
+  .works_item {
+    margin-left: 10%;
+    margin-right: 10%; }
+  .c-card-works {
+    margin-bottom: 20px; }
+  .c-card-works_info {
+    top: -23px; } }
 
 @media all and (max-width: 800px) {
   .section .grid .grid_column:not(.section-scenario .grid_column) {
@@ -1686,7 +1703,54 @@ input[placeholder] {
   .plate::after {
     display: none; }
   .section-output .output {
-    padding: 0; } }
+    padding: 0; }
+  .contact_footer .footer-menu {
+    margin: 0; }
+  .footer-logo {
+    float: none; }
+  .works-footer .footer-menu_item::after {
+    content: ""; }
+  .works-footer {
+    height: auto; }
+  .footer-menu {
+    float: none; }
+  .works-footer .footer-menu_item:first-child .footer-menu_link {
+    padding-left: 8px; } }
+
+@media all and (max-width: 750px) {
+  .works_item {
+    margin: 0; } }
+
+@media all and (max-width: 610px) {
+  /*contact.html*/
+  .c-card-works_order {
+    margin: 0;
+    margin-bottom: 10px; }
+  .c-card-works_item {
+    display: block; }
+  .c-card-works .player-layout {
+    width: 100%; }
+  .c-card-works .mejs__controls .mejs__time-rail {
+    width: 54vw !important; } }
+
+@media all and (max-width: 570px) {
+  /*contact.html*/
+  .contact-main_column {
+    width: 100%;
+    display: block; }
+  .contact-main_list {
+    width: auto; } }
+
+@media all and (max-height: 1050px) {
+  /*contact.html*/
+  .contact {
+    height: auto;
+    min-height: 0; }
+  .contact_footer {
+    height: auto; }
+  .page_body {
+    overflow: visible;
+    height: auto; } }
 
 @media all and (max-width: 550px) {
   .section-type .grid {
@@ -1729,4 +1793,12 @@ input[placeholder] {
   .section {
     height: auto;
     overflow: visible;
-    padding: 20px; } }
+    padding: 20px; }
+  .contact-main_title {
+    font-size: 42px; }
+  .c-card-works .mejs__controls .mejs__time-rail {
+    width: 40vw !important; } }
+
+@media all and (max-width: 380px) {
+  .c-card-works .mejs__controls .mejs__time-rail {
+    width: 30vw !important; } }

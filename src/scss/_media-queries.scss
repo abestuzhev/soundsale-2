@@ -270,7 +270,7 @@
 
   .horizontal-nav .horizontal-entry {
     position: absolute;
-    top: 67px;
+    top: 78px;
     left: 20px;
     padding: 0;
     padding-top: 23px;
@@ -279,6 +279,43 @@
   .horizontal-nav .horizontal-entry::before {
     left: 8px;
     top: 0;
+  }
+
+  /*works*/
+  .c-card-works_item:last-child {
+    display: block;
+  }
+  // .c-card-works_order {
+  //   width: 150px;
+  // }
+  .c-card-works {
+    padding: 6px;
+  }
+
+  .c-card-works_passport {
+    display: block;
+  }
+
+  .works-main .container-layout {
+    padding: 0;
+  }
+  .c-card-works_passport-turn {
+    width: 100%;
+    top: 0px;
+    right: -1px;
+  }
+
+  .works_item {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .c-card-works {
+    margin-bottom: 20px;
+  }
+
+  .c-card-works_info {
+    top: -23px;
   }
 }
 
@@ -345,6 +382,84 @@
   }
 
 
+  .contact_footer .footer-menu {
+    margin: 0;
+  }
+  .footer-logo {
+    float: none;
+  }
+
+  .works-footer .footer-menu_item::after {
+    content: "";
+  }
+  .works-footer {
+    height: auto;
+  }
+  .footer-menu {
+    float: none;
+  }
+
+  .works-footer .footer-menu_item:first-child .footer-menu_link {
+    padding-left: 8px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .works_item {
+    margin: 0;
+  }
+}
+
+@media all and (max-width: 610px) {
+
+  /*contact.html*/
+  .c-card-works_order {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .c-card-works_item {
+    display: block;
+  }
+
+  .c-card-works .player-layout {
+    width: 100%;
+  }
+
+  .c-card-works .mejs__controls .mejs__time-rail {
+    width: 54vw !important;
+  }
+
+}
+
+@media all and (max-width: 570px) {
+
+  /*contact.html*/
+  .contact-main_column {
+    width: 100%;
+    display: block;
+  }
+  .contact-main_list {
+    width: auto;
+  }
+}
+
+@media all and (max-height: 1050px) {
+
+  /*contact.html*/
+
+  .contact {
+    height: auto;
+    min-height: 0;
+  }
+
+  .contact_footer {
+    height: auto;
+  }
+
+  .page_body {
+    overflow: visible;
+    height: auto;
+  }
 }
 
 
@@ -417,5 +532,17 @@
     padding: 20px;
   }
 
+  .contact-main_title {
+    font-size: 42px;
+  }
 
+  .c-card-works .mejs__controls .mejs__time-rail {
+    width: 40vw !important;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .c-card-works .mejs__controls .mejs__time-rail {
+    width: 30vw !important;
+  }
 }
