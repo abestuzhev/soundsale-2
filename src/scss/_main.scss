@@ -5,6 +5,11 @@
   position: relative;
 }
 
+.section:first-child,
+.section:nth-child(2) {
+  overflow: visible;
+}
+
 .section-menu {
   background: url($img-dir + 'slide-bg-first.jpg') 0 0 no-repeat;
   -webkit-background-size: cover;
@@ -205,14 +210,82 @@
       text-transform: uppercase;
     }
 
-    &_add-letter {
-      display: inline-block;
+    &_btn {
       width: 65px;
       height: 65px;
       border-radius: 65px;
-      vertical-align: top;
       margin-top: 33px;
+      vertical-align: top;
       background-color: #31c5f0;
+      overflow: hidden;
+      font-size: 0;
+    }
+
+    &_btn-box {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+
+      .c-tooltip {
+        top: 38px;
+        right: -26px;
+        background-color: #0088af;
+      }
+      .c-tooltip_text {
+        width: 277px;
+        right: -110px;
+      }
+    }
+
+    &_add-letter,
+    &_remove-letter {
+      font-size: 1em;
+      display: inline-block;
+      height: 100%;
+      transform:skewX(-15deg);
+      position: relative;
+      -webkit-transition: all .2s ease-out;
+      -moz-transition: all .2s ease-out;
+      -ms-transition: all .2s ease-out;
+      -o-transition: all .2s ease-out;
+      transition: all .2s ease-out;
+
+      &::after {
+        content: '';
+        font-size: 33px;
+        color: #fff;
+        transform:skewX(15deg);
+        position: absolute;
+      }
+
+      &:hover {
+        background-color: #0088af;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+      }
+    }
+
+    &_add-letter {
+      width: 55%;
+      border-right: 2px solid #fff;
+
+      &::after {
+        content: '+';
+        top: 11px;
+        left: 7px;
+      }
+    }
+
+    &_remove-letter {
+      width: 45%;
+      &::after {
+        content: '−';
+        top: 17px;
+        left: 7px;
+      }
     }
 
     &_add-word {
@@ -514,8 +587,8 @@
 
   .section_img {
     position: absolute;
-    top: 226px;
-    right: 121px;
+    top: 200px;
+    right: -130px;
   }
 
   .grid,
@@ -686,6 +759,7 @@
 
 .page_body {
   height: 100%;
+  overflow: visible;
 }
 
 .contact {
@@ -839,7 +913,7 @@
   text-align: center;
 
   &-main {
-    padding-top: 42px;
+    padding-top: 90px;
 
     .section_title {
       color: #1C3344;
@@ -979,7 +1053,7 @@
 .slide-law {
   width: 980px;
   position: absolute;
-  top: 45%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

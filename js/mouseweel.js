@@ -169,45 +169,5 @@ function addMousewheel() {
 
 
 
-var menu_selector = ".vertical-menu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
 
-function onScroll(){
-    var scroll_top = $(document).scrollTop();
-    $(menu_selector + " a").each(function(){
-        var hash = $(this).attr("href");
-        var target = $(hash);
-        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
-            $(menu_selector + " .active").removeClass("active");
-            $(this).parents(".vertical-menu_item").addClass("active");
-        } else {
-          $(this).parents(".vertical-menu_item").removeClass("active");
-        }
-    });
-}
-
-$(document).ready(function () {
-
-    $(document).on("scroll", onScroll);
-
-    $(".vertical-menu_link, .c-arrow-down, .logo a").click(function(e){
-        e.preventDefault();
-        console.log(this);
-        $(document).off("scroll");
-        $(menu_selector + " .active").removeClass("active");
-        $(this).parents(".vertical-menu_item").addClass("active");
-        var hash = $(this).attr("href");
-        var target = $(hash);
-
-        console.log(hash);
-
-        $("html, body").stop().animate({
-            scrollTop: target.offset().top
-        }, 300, function(){
-            window.location.hash = hash;
-            $(document).on("scroll", onScroll);
-        });
-
-    });
-
-});
 });// end $(function(){

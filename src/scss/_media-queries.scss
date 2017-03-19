@@ -301,7 +301,7 @@
   }
   .c-card-works_passport-turn {
     width: 100%;
-    top: 0px;
+    top: 0;
     right: -1px;
   }
 
@@ -316,6 +316,10 @@
 
   .c-card-works_info {
     top: -23px;
+  }
+
+  .works-main {
+    padding-top: 30px;
   }
 }
 
@@ -443,7 +447,7 @@
   }
 }
 
-@media all and (max-height: 1050px) {
+@media all and (max-height: 900px) {
 
   /*contact.html*/
 

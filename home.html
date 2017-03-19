@@ -10,7 +10,7 @@
 
 
   <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css"/>
-  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+  <!--<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>-->
   <link rel="stylesheet" type="text/css" href="css/examples.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
@@ -19,7 +19,7 @@
   <script src="bower_components/mediaelement/build/mediaelement-and-player.min.js"></script>
   <script src="bower_components/jquery-mask-plugin/dist/jquery.mask.js"></script>
   <!-- <script src="bower_components/sticky-kit/jquery.sticky-kit.min.js"></script> -->
-  <script src="js/jquery.stickybox.js"></script>
+  <!--<script src="js/jquery.stickybox.js"></script>-->
   <script src="js/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js"></script>
   <script src="js/mouseweel.js"></script>
 
@@ -384,10 +384,10 @@
         </div><!--end grid-->
         <h3 class="section_subtitle">Свой выбор</h3>
         <div class="grid">
-          <div class="grid_column">
+          <div class="grid_column js-musical-direction">
             <h4 class="section_small-title">Музыкальное направление:</h4>
             <div class="grid_item">
-              <input type="checkbox" id="rap" name="musical-direction" checked="checked">
+              <input type="checkbox" id="rap" name="musical-direction">
               <label class="c-label" for="rap">Рэп</label>
             </div>
             <div class="grid_item">
@@ -407,15 +407,15 @@
               <label class="c-label" for="dub-step">Даб-Степ</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="stage" name="musical-direction" checked="checked">
+              <input type="checkbox" id="stage" name="musical-direction">
               <label class="c-label" for="stage">Эстрада</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="information" name="musical-direction">
+              <input type="checkbox" id="information" name="musical-direction" checked="checked">
               <label class="c-label" for="information">Информационная</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="image" name="musical-direction">
+              <input type="checkbox" id="image" name="musical-direction" checked="checked">
               <label class="c-label" for="image">Имиджевая</label>
             </div>
             <div class="grid_item">
@@ -432,7 +432,7 @@
             </div>
           </div><!--end grid-column-->
 
-          <div class="grid_column">
+          <div class="grid_column js-tempo">
             <h4 class="section_small-title">Темп музыки:</h4>
             <div class="grid_item">
               <input type="checkbox" id="fast" name="tempo" checked="checked">
@@ -447,7 +447,7 @@
               <label class="c-label" for="slow">Медленный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="melodic" name="tempo">
+              <input type="checkbox" id="melodic" name="tempo" checked="checked">
               <label class="c-label" for="melodic">Мелодичный</label>
             </div>
             <div class="grid_item">
@@ -544,41 +544,64 @@
         <div class="slide-accent_subtitle">Укажите ударения в именах собственных (имена и фамилии, географические
           названия, логотип фирмы или услуги) и других спорных словах, которые мы не сможем проверить в словаре.
         </div>
-
-        <div class="accent-letter accent-letter_box">
-          <div class="accent-letter_list">
-            <div class="accent-letter_item">
-              <input id="accent-letter_radio-1" type="radio" name="accent">
-              <label for="accent-letter_radio-1" class="accent-letter_radio"></label>
-              <input type="text" class="accent-letter_input">
-            </div><!--accent-letter_item-->
-            <div class="accent-letter_item">
-              <input id="accent-letter_radio-2" type="radio" name="accent">
-              <label for="accent-letter_radio-2" class="accent-letter_radio"></label>
-              <input type="text" class="accent-letter_input">
-            </div><!--accent-letter_item-->
-            <div class="accent-letter_item">
-              <input id="accent-letter_radio-3" type="radio" name="accent">
-              <label for="accent-letter_radio-3" class="accent-letter_radio"></label>
-              <input type="text" class="accent-letter_input">
-            </div><!--accent-letter_item-->
-            <div class="accent-letter_item">
-              <input id="accent-letter_radio-4" type="radio" name="accent">
-              <label for="accent-letter_radio-4" class="accent-letter_radio"></label>
-              <input type="text" class="accent-letter_input">
-            </div><!--accent-letter_item-->
-            <div class="accent-letter_item">
-              <input id="accent-letter_radio-5" type="radio" name="accent">
-              <label for="accent-letter_radio-5" class="accent-letter_radio"></label>
-              <input type="text" class="accent-letter_input">
-            </div><!--accent-letter_item-->
-          </div><!--accent-letter_list-->
-          <a href="#" class="accent-letter_add-letter"></a>
-        </div>
-
-
+        <div class="l-slide-accent">
+          <div class="accent-letter accent-letter_box">
+            <div class="accent-letter_list">
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-11" type="radio" name="accent1">
+                <label for="accent-letter_radio-11" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-21" type="radio" name="accent1">
+                <label for="accent-letter_radio-21" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-31" type="radio" name="accent1">
+                <label for="accent-letter_radio-31" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-41" type="radio" name="accent1">
+                <label for="accent-letter_radio-41" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-51" type="radio" name="accent1">
+                <label for="accent-letter_radio-51" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-61" type="radio" name="accent1">
+                <label for="accent-letter_radio-61" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-71" type="radio" name="accent1">
+                <label for="accent-letter_radio-71" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+              <div class="accent-letter_item">
+                <input id="accent-letter_radio-81" type="radio" name="accent1">
+                <label for="accent-letter_radio-81" class="accent-letter_radio"></label>
+                <input type="text" class="accent-letter_input">
+              </div><!--accent-letter_item-->
+            </div><!--accent-letter_list-->
+            <div class="accent-letter_btn-box">
+              <div class="accent-letter_btn">
+                <a href="#" class="accent-letter_add-letter"></a>
+                <a href="#" class="accent-letter_remove-letter"></a>
+              </div>
+              <a href="#" class="c-tooltip">
+                <span class="c-tooltip_text">Добавление и удаление букв в слове</span>
+              </a>
+            </div><!--end accent-letter_btn-box-->
+          </div><!--accent-letter_box-->
+        </div><!--end l-slide-accent-->
         <a href="#" class="accent-letter_add-word">Добавить слово</a>
       </div><!--end slide-form-style-->
+
     </div><!--container-layout-->
 
 
@@ -604,13 +627,13 @@
 
         <div class="output">
           <div class="output_item output_item--place">
-            <input type="text" name="output-place">
+            <input type="text" name="output-place" placeholder="Ваш адрес">
           </div>
           <div class="output_item output_item--number">
-            <input type="text" name="output-number">
+            <input type="text" name="output-number" placeholder="+7(___)___-__-__">
           </div>
           <div class="output_item output_item--site">
-            <input type="text" name="output-site">
+            <input type="text" name="output-site" placeholder="Ваш сайт">
           </div>
         </div> <!--end output-->
 
@@ -682,15 +705,15 @@
       <ul class="information">
         <li class="information_item">
           <div class="information_title">Сценарий</div>
-          <div class="information_text">Готоывй сценарий</div>
+          <div class="information_text information-scenario">Готоывй сценарий</div>
         </li>
         <li class="information_item">
           <div class="information_title">Вид продукции</div>
-          <div class="information_text">Ролики дя торгового центра</div>
+          <div class="information_text information-view">Радиоролик</div>
         </li>
         <li class="information_item">
           <div class="information_title">Тип ролика</div>
-          <div class="information_text">Игровой</div>
+          <div class="information_text information-type">Информационный</div>
         </li>
         <li class="information_item">
           <div class="information_title">Хронометраж</div>
@@ -698,12 +721,12 @@
         </li>
         <li class="information_item">
           <div class="information_title">Наличие фирменного муыкального стиля</div>
-          <div class="information_text">Да</div>
+          <div class="information_text information-form-style">Да</div>
         </li>
         <li class="information_item">
           <div class="information_title">Музыкальное сопровождение</div>
-          <div class="information_text">Музыкальное направление: информационная, имиджевая</div>
-          <div class="information_text">Темп музыки: быстрый, мелодичный</div>
+          <div class="information_text">Музыкальное направление: <span class="information-direction">Информационная, Имиджевая</span></div>
+          <div class="information_text">Темп музыки: <span class="information-tempo">Быстрый, Мелодичный</span></div>
           <div class="information_text">Национальность: Европа</div>
         </li>
         <li class="information_item">
@@ -712,13 +735,13 @@
         </li>
         <li class="information_item">
           <div class="information_title">Выходные данные</div>
-          <div class="information_text">г. Архангельск, пр.Обводный канал, дом 37, 5 этаж, офис 127</div>
-          <div class="information_text">+7 911 55-55-555</div>
-          <div class="information_text">www.okna.ru</div>
+          <div class="information_text information_text-place"></div>
+          <div class="information_text information_text-number"></div>
+          <div class="information_text information_text-site"></div>
         </li>
         <li class="information_item">
           <div class="information_title">Соответствия закону о рекламе</div>
-          <div class="information_text">Скидки</div>
+          <div class="information_text information-law">Распродажи</div>
         </li>
       </ul>
       <div class="advertising-law">
@@ -743,7 +766,7 @@
 
     // $("#js-horizontal-nav").stick_in_parent();
     // $("#js-vertical-nav").stick_in_parent();
-    $("#menu").stickyBox();
+//    $("#menu").stickyBox();
 
 
   });

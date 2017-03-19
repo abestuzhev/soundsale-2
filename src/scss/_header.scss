@@ -114,7 +114,7 @@
   background-color: #222424;
   //transform: translateX(52px);
   transition: all .08s ease-out;
-  // display: none;
+   display: none;
   //
   // &:hover {
   //   width: 205px;
@@ -242,7 +242,7 @@
   box-shadow: 1px 1.7px 7px rgba(0, 0, 0, 0.15);
   // transform: translateY(-64px);
   transition: all .08s ease-out;
-  // display: none;
+   display: none;
 
   &::after {
     content: '';
