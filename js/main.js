@@ -289,28 +289,23 @@ $('#count-words').on('change keyup keydown', function() {
    var $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
    $('.word-count_line').find('#counted').text($_count); // Вывод подсчета
 
+   console.log($_count);
    var main = $_count * 100;
-   var value= (main / 50);
-   
+   var value = (main / 80);
+   console.log('main: ' + main);
+   console.log('value: ' + value);
+
+   if($_count <= 80){
+     $('.text-entry_slide-range').animate({
+       "width": value+'%',
+     }, 1);
+   }
+   else{
+     alert('Превышен лимит слов!');
+   }
  });
 
- $("#count-words").keyup(function(){
-		// var box=$(this).val();
-		var main = box.length *100;
-		var value= (main / 50);
-		// var count= 50 - box.length;
 
-		if(box.length <= 50){
-			$('#count').html(count);
-			$('#bar').animate({
-				"width": value+'%',
-			}, 1);
-		}
-		else{
-			alert('Места больше нет!!!');
-		}
-		return false;
-	});
 
 //окончание счетчик букв
 });

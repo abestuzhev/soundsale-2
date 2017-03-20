@@ -1179,7 +1179,7 @@ input[placeholder] {
       .slide-chronometry .text-entry_slide-range {
         background-color: #0f7180;
         height: 4px;
-        width: 20%; }
+        width: 0%; }
       .slide-chronometry .text-entry_slide-handler {
         position: absolute;
         top: -9px;
