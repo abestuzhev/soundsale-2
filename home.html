@@ -269,6 +269,17 @@
         </div><!--end grid-->
         <div class="text-entry">
           <div class="text-entry_box">
+
+            <div class="text-entry_calculate">
+              <input type="radio" id="chronometry-сalc" name="chronometry">
+              <label class="c-label_calc" for="chronometry-сalc">Рассчитать хронометраж текста</label>
+            </div>
+            <div class="text-entry_time">
+              <input class="text-entry_time-number" id="text-entry_time-min" type="text" placeholder="01">
+              <span class="text-entry_time-text">мин.</span>
+              <input class="text-entry_time-number" id="text-entry_time-sec" type="text" placeholder="35">
+              <span class="text-entry_time-text">сек.</span>
+            </div>
             <textarea id="count-words" class="text-entry_area" name="name" rows="" cols="" placeholder="Начните вводить текст..."></textarea>
             <div class="text-entry_subtext">Скопируйте текст в окно. Удалите ремарки и комментарии.</div>
             <a class="text-entry_button" href="#">Сбросить</a>
@@ -279,9 +290,9 @@
               <div class="text-entry_slide-range"></div>
               <div class="text-entry_slide-handler"></div>
             </div>
-            <div class="text-entry_slide-text">Хронометраж: 31 сек.</div>
+            <div class="text-entry_slide-text">Хронометраж: <span id="countChronometry">0</span> сек.</div>
           </div>
-          <div class="text-entry_info"><span class="word-count_line">Слов: <span id="counted" class="js-text-entry_count-word">0</span>.</span> Для достижения требуемого хронометража <span>добавьте 227 слов</span></div>
+          <div class="text-entry_info"><span class="word-count_line">Слов: <span id="counted" class="js-text-entry_count-word">0</span>.</span> Для достижения требуемого хронометража <span class="leftWords_box">добавьте <span id="left-counted">0</span> слов</span></div>
           <div class="text-entry_text">* Вы должны учитывать тот факт, что расчёт времени будет примерным.</div>
         </div>
 

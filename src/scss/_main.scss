@@ -458,13 +458,42 @@
     font-family: "Open Sans", sans-serif;
 
     &_box {
-      text-align: right;
+      // text-align: right;
       margin-bottom: 14px;
 
       &::after {
         content: "";
         clear: both;
         display: block;
+      }
+    }
+
+    &_calculate {
+      display: inline-block;
+      margin-bottom: 11px;
+      margin-right: 70px;
+    }
+
+    &_time {
+      display: inline-block;
+    }
+
+    .text-entry_time {
+      &-number {
+        width: 42px;
+        height: 24px;
+        padding: 11px 7px;
+        background-color: #fff;
+        border-radius: 4px;
+        text-align: center;
+      }
+
+      &-text {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+        text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.14);
+        margin-right: 15px;
       }
     }
 
@@ -511,7 +540,7 @@
       &-handler {
         position: absolute;
         top: -9px;
-        right: 26%;
+        right: 0%;
         width: 18px;
         height: 18px;
         background-color: #FFF;

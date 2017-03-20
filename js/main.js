@@ -287,15 +287,23 @@ $(document).ready(function () {
 //счетчик слов
 $('#count-words').on('change keyup keydown', function() {
    var $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
+   var maxLetter = 80;
    $('.word-count_line').find('#counted').text($_count); // Вывод подсчета
+
+   //вывод остатка слов
+   var $_leftWords = maxLetter - $_count;
+   $('.leftWords_box').find('#left-counted').text($_leftWords); // Вывод подсчета
+
+   //вывод хронометража
+   var $_countChronometry = $_count * 1;
+   $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета
+
 
    console.log($_count);
    var main = $_count * 100;
-   var value = (main / 80);
-   console.log('main: ' + main);
-   console.log('value: ' + value);
+   var value = (main / maxLetter);
 
-   if($_count <= 80){
+   if($_count <= maxLetter){
      $('.text-entry_slide-range').animate({
        "width": value+'%',
      }, 1);
@@ -305,7 +313,28 @@ $('#count-words').on('change keyup keydown', function() {
    }
  });
 
+ $(".text-entry_time-number").mask('00');
 
+//функция офистки >60
+function clearTime (elem){
+  $(elem).on('change', function(){
+    var value = $(elem).val();
+    if(value > 60) {
+      $(elem).val('');
+    }
+  });
+}
+
+clearTime("#text-entry_time-min");
+clearTime("#text-entry_time-sec");
+
+
+//сброс textarea
+$(".text-entry_button").on("click", function(e){
+  e.preventDefault();
+  $("#count-words").val("");
+  $_count = 0;
+})
 
 //окончание счетчик букв
 });

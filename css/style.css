@@ -138,6 +138,37 @@ input[placeholder] {
   top: 50%;
   left: 50%; }
 
+.c-label_calc {
+  display: inline-block;
+  cursor: pointer;
+  font: 600 14px/1.2 "Open Sans", sans-serif;
+  vertical-align: middle;
+  color: #fff;
+  padding: 0;
+  position: relative; }
+
+.c-label_calc::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 9px;
+  background-color: #fff;
+  vertical-align: middle;
+  border-radius: 4px; }
+
+input[type=radio]:checked + .c-label_calc::after,
+input[type=checkbox]:checked + .c-label_calc::after {
+  content: "";
+  width: 17px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  color: #000;
+  background: url("../img/check-calc.png") no-repeat 50% 50%; }
+
 .c-arrow-down {
   width: 80px;
   height: 61px;
@@ -1143,12 +1174,30 @@ input[placeholder] {
     padding: 0 66px;
     font-family: "Open Sans", sans-serif; }
     .slide-chronometry .text-entry_box {
-      text-align: right;
       margin-bottom: 14px; }
       .slide-chronometry .text-entry_box::after {
         content: "";
         clear: both;
         display: block; }
+    .slide-chronometry .text-entry_calculate {
+      display: inline-block;
+      margin-bottom: 11px;
+      margin-right: 70px; }
+    .slide-chronometry .text-entry_time {
+      display: inline-block; }
+    .slide-chronometry .text-entry .text-entry_time-number {
+      width: 42px;
+      height: 24px;
+      padding: 11px 7px;
+      background-color: #fff;
+      border-radius: 4px;
+      text-align: center; }
+    .slide-chronometry .text-entry .text-entry_time-text {
+      color: #FFF;
+      font-size: 14px;
+      font-weight: 400;
+      text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.14);
+      margin-right: 15px; }
     .slide-chronometry .text-entry_button {
       float: right;
       padding: 12px 49px;
@@ -1183,7 +1232,7 @@ input[placeholder] {
       .slide-chronometry .text-entry_slide-handler {
         position: absolute;
         top: -9px;
-        right: 26%;
+        right: 0%;
         width: 18px;
         height: 18px;
         background-color: #FFF;
