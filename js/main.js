@@ -284,6 +284,33 @@ $(document).ready(function () {
     });
 
     */
+//счетчик слов
+$('#count-words').on('change keyup keydown', function() {
+   var $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
+   $('.word-count_line').find('#counted').text($_count); // Вывод подсчета
 
-//счетчик букв
+   var main = $_count * 100;
+   var value= (main / 50);
+   
+ });
+
+ $("#count-words").keyup(function(){
+		// var box=$(this).val();
+		var main = box.length *100;
+		var value= (main / 50);
+		// var count= 50 - box.length;
+
+		if(box.length <= 50){
+			$('#count').html(count);
+			$('#bar').animate({
+				"width": value+'%',
+			}, 1);
+		}
+		else{
+			alert('Места больше нет!!!');
+		}
+		return false;
+	});
+
+//окончание счетчик букв
 });

@@ -145,8 +145,15 @@
 
 .vertical-menu_item.active{
   background:#666;
-  background: #fda033;
+  background: #000;
   color: #fff;
+  background-position: -24px 0;
+  transition: all .2s ease-out;
+}
+
+.vertical-menu_item.active .vertical-menu_link{
+  background-position: -24px 0;
+  transition: all .2s ease-out;
 }
 
 .vertical-menu_link {
