@@ -207,7 +207,7 @@ $(document).ready(function () {
     contactInner(".output_item--number input", ".information_text-number");
     contactInner(".output_item--site input", ".information_text-site");
     $(".output_item--number input").mask('+7(000)000-00-00');
-    
+
 //плавный якорь
 // var top;
 //     function scrollToAnchor (elem) {
@@ -285,4 +285,5 @@ $(document).ready(function () {
 
     */
 
+//счетчик букв
 });
