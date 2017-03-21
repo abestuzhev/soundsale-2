@@ -540,7 +540,7 @@
       &-handler {
         position: absolute;
         top: -9px;
-        right: 0%;
+        right: 0;
         width: 18px;
         height: 18px;
         background-color: #FFF;
@@ -559,11 +559,20 @@
           border-radius: 50px;
         }
 
-        &::before {
-          content: "155 сек.";
+        //&::before {
+        //  content: "155 сек.";
+        //  position: absolute;
+        //  left: -80%;
+        //  top: 24px;
+        //  white-space: nowrap;
+        //  color: #0B373E;
+        //  font-size: 14px;
+        //}
+        &-text {
           position: absolute;
-          left: -80%;
-          top: 24px;
+          bottom: -21px;
+          left: -15px;
+          text-align: center;
           white-space: nowrap;
           color: #0B373E;
           font-size: 14px;

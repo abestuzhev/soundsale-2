@@ -1232,7 +1232,7 @@ input[type=checkbox]:checked + .c-label_calc::after {
       .slide-chronometry .text-entry_slide-handler {
         position: absolute;
         top: -9px;
-        right: 0%;
+        right: 0;
         width: 18px;
         height: 18px;
         background-color: #FFF;
@@ -1250,11 +1250,11 @@ input[type=checkbox]:checked + .c-label_calc::after {
           height: 10px;
           background-color: #0F7180;
           border-radius: 50px; }
-        .slide-chronometry .text-entry_slide-handler::before {
-          content: "155 сек.";
+        .slide-chronometry .text-entry_slide-handler-text {
           position: absolute;
-          left: -80%;
-          top: 24px;
+          bottom: -21px;
+          left: -15px;
+          text-align: center;
           white-space: nowrap;
           color: #0B373E;
           font-size: 14px; }

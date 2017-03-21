@@ -275,7 +275,7 @@
               <label class="c-label_calc" for="chronometry-сalc">Рассчитать хронометраж текста</label>
             </div>
             <div class="text-entry_time">
-              <input class="text-entry_time-number" id="text-entry_time-min" type="text" placeholder="01">
+              <input class="text-entry_time-number" id="text-entry_time-min" type="text" placeholder="1">
               <span class="text-entry_time-text">мин.</span>
               <input class="text-entry_time-number" id="text-entry_time-sec" type="text" placeholder="35">
               <span class="text-entry_time-text">сек.</span>
@@ -288,7 +288,9 @@
           <div class="text-entry_slide">
             <div class="text-entry_slide-horizontal">
               <div class="text-entry_slide-range"></div>
-              <div class="text-entry_slide-handler"></div>
+              <div class="text-entry_slide-handler">
+                <div class="text-entry_slide-handler-text"><span id="handler-time">0</span> сек.</div>
+              </div>
             </div>
             <div class="text-entry_slide-text">Хронометраж: <span id="countChronometry">0</span> сек.</div>
           </div>

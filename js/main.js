@@ -313,7 +313,10 @@ $('#count-words').on('change keyup keydown', function() {
    }
  });
 
- $(".text-entry_time-number").mask('00');
+ $("#text-entry_time-min").mask('0');
+ $("#text-entry_time-sec").mask('00');
+
+
 
 //функция офистки >60
 function clearTime (elem){
@@ -334,7 +337,19 @@ $(".text-entry_button").on("click", function(e){
   e.preventDefault();
   $("#count-words").val("");
   $_count = 0;
-})
+});
+
+
+    $(".text-entry_time-number").on('change', function(){
+
+        var timeMin = $("#text-entry_time-min").val() * 60;
+        var timeSec = $("#text-entry_time-sec").val();
+        var allTime = +timeMin + +timeSec;
+        console.log(allTime);
+        $('.text-entry_slide-handler-text').find('#handler-time').text(allTime);
+    });
+
+
 
 //окончание счетчик букв
 });
