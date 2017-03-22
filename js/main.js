@@ -355,7 +355,7 @@ $('#count-words').on('change keyup keydown', function() {
      alert('Превышен лимит слов или не выставлен хронометраж текста!');
    }
 
-   $("#chronometry-сalc").checked(1);
+  //  $("#chronometry-сalc").checked(1);
  });
 
  $("#text-entry_time-min").mask('0');
@@ -393,6 +393,7 @@ $(".text-entry_button").on("click", function(e){
   var $_countChronometry = $_count;
   $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета
 
+  $('.text-entry_slide-range').css("width", "0");
 });
 
 
