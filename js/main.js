@@ -13,11 +13,39 @@ $(document).ready(function () {
     var topSlide1 = $("#firstPage").offset().top;
     var topSlide2 = $("#scenario").offset().top;
     console.log(topSlide2);
-    if($(window).scrollTop() == topSlide2) {
+    if($(window).scrollTop() != topSlide1) {
         $(".vertical-nav, .horizontal-nav").addClass("js-show-menu");
-    }else if ($(window).scrollTop() == topSlide1) {
+    }else {
         $(".vertical-nav, .horizontal-nav").removeClass("js-show-menu");
     }
+  });
+
+
+
+
+$(".file-button_add").click(function(e){
+  e.preventDefault();
+  var $upload_item = $(
+    '<div class="load-style_item">' +
+      '<div class="load-style_upload">' +
+        '<div class="inputfile-box">' +
+          '<input type="file" id="file" class="inputfile" onchange="uploadFile(this)">' +
+          '<label for="file">' +
+            '<span id="file-name" class="file-box"></span>' +
+            '<span class="file-button">Обзор...</span>' +
+          '</label>' +
+          '<a href="#" class="file-button_remove">−</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>'
+  );
+  $(this).parents(".load-style_list").append($upload_item);
+});
+
+
+$("body").on("click", ".file-button_remove", function (e) {
+    e.preventDefault();
+    $(this).parents(".load-style_item").remove();
   });
 
 
@@ -208,6 +236,8 @@ $(document).ready(function () {
     contactInner(".output_item--site input", ".information_text-site");
     $(".output_item--number input").mask('+7(000)000-00-00');
 
+    contactInner("#text-entry_time-min", ".information_text-time-min");
+    contactInner("#text-entry_time-sec", ".information_text-time-sec");
 //плавный якорь
 // var top;
 //     function scrollToAnchor (elem) {
@@ -285,9 +315,22 @@ $(document).ready(function () {
 
     */
 //счетчик слов
+var maxLetter;
+
+$(".text-entry_time-number").on('change', function(){
+
+    var timeMin = $("#text-entry_time-min").val() * 60;
+    var timeSec = $("#text-entry_time-sec").val();
+    var allTime = +timeMin + +timeSec;
+    $('.text-entry_slide-handler-text').find('#handler-time').text(allTime);
+
+  maxLetter = allTime;
+});
+
+
 $('#count-words').on('change keyup keydown', function() {
    var $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
-   var maxLetter = 80;
+
    $('.word-count_line').find('#counted').text($_count); // Вывод подсчета
 
    //вывод остатка слов
@@ -309,8 +352,10 @@ $('#count-words').on('change keyup keydown', function() {
      }, 1);
    }
    else{
-     alert('Превышен лимит слов!');
+     alert('Превышен лимит слов или не выставлен хронометраж текста!');
    }
+
+   $("#chronometry-сalc").checked(1);
  });
 
  $("#text-entry_time-min").mask('0');
@@ -336,18 +381,21 @@ clearTime("#text-entry_time-sec");
 $(".text-entry_button").on("click", function(e){
   e.preventDefault();
   $("#count-words").val("");
-  $_count = 0;
+  //количество слов
+  $_count = $('#count-words').val().length = 0;
+  $('.word-count_line').find('#counted').text($_count); // Вывод подсчета
+
+  //убираем остаток свойств
+  $_leftWords = maxLetter - $_count;
+  $('.leftWords_box').find('#left-counted').text($_leftWords); // Вывод подсчета
+
+  //ресет хронометража
+  var $_countChronometry = $_count;
+  $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета
+
 });
 
 
-    $(".text-entry_time-number").on('change', function(){
-
-        var timeMin = $("#text-entry_time-min").val() * 60;
-        var timeSec = $("#text-entry_time-sec").val();
-        var allTime = +timeMin + +timeSec;
-        console.log(allTime);
-        $('.text-entry_slide-handler-text').find('#handler-time').text(allTime);
-    });
 
 
 

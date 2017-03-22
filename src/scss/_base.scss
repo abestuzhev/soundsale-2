@@ -5,7 +5,9 @@ $font-text: 'Open Sans', sans-serif;
 $img-dir: "../img/";
 
 .js-show-menu {
-  display: block !important;
+  // display: block !important;
+  opacity: 1 !important;
+  transition: all .08s ease-out;
 }
 
 ul {
@@ -72,7 +74,7 @@ p {
 .logo {
   width: 44px;
   height: 44px;
-  background: url($img-dir + 'logo-menu.png') 0 0 no-repeat;
+  // background: url($img-dir + 'logo-menu.png') 0 0 no-repeat;
   margin: 4px;
   margin-bottom: 17px;
 

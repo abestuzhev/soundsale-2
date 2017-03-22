@@ -508,7 +508,8 @@
     transition: all .2s ease-out;
   }
 
-  &_add {
+  &_add,
+  &_remove {
     position: absolute;
     top: 0;
     right: 0;
