@@ -324,25 +324,76 @@ $(".text-entry_time-number").on('change', function(){
     var allTime = +timeMin + +timeSec;
     $('.text-entry_slide-handler-text').find('#handler-time').text(allTime);
 
-  maxLetter = allTime;
+  maxLetter = allTime*2;
 });
+//  var $word_arr
+// $('#count-words').on('change', function() {
+//    $word_arr = $.trim($('#count-words').val()).split(' ');
+//    console.log($word_arr);
+// });
+
+// var $_count;
+// $('#count-words').keyup(function() {
+//   $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
+//   console.log($_count);
+// });
+
+$('#count-words').on('change', function() {
+
+   var $word_arr = $.trim($('#count-words').val()).split(' ');
+   console.log('исходный массив ' + $word_arr);
+   var $_count;
+  //  $.each($word_arr, function(index,value){
+   //
+  //    if(parseInt(value.length) > 3){
+  //       $_count = parseInt($.trim($(this).val()).split(' ').length);
+  //    }else {
+  //      $word_arr = value;
+  //    }
+  //    return $_count;
+  //  });
+
+   /*пример*/
+
+  //  var numbers = [-2, 5, 1, -5, -1, 1, 3, 4, -1];
+
+  var filterArr = $.grep($word_arr, function(elem) {
+
+  	if (parseInt(elem.length) > 3) {
+  		return true;
+  	} else {
+  		return false;
+  	}
+  });
+  //
+  console.log('массив filterArr: ' + filterArr);
+  console.log('количество слов: ' + filterArr.length);
+  $_count = parseInt(filterArr.length); // приходит длина массива / 2
+
+  // var filter_num = filterArr.lenght;
+  // console.log('число слов ' + filter_num);
+
+  // $_count = filterArr.lenght;
+  // $_resarr =$.trim($(this).val()).split(' ');
 
 
-$('#count-words').on('change keyup keydown', function() {
-   var $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
+  // console.log('$_resarr: ' + $_resarr);
+  //  $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
 
-   $('.word-count_line').find('#counted').text($_count); // Вывод подсчета
+
+  //количество слов
+   $('.word-count_line').find('#counted').text($_count); // Вывод подсчета (слов)
 
    //вывод остатка слов
    var $_leftWords = maxLetter - $_count;
-   $('.leftWords_box').find('#left-counted').text($_leftWords); // Вывод подсчета
+   $('.leftWords_box').find('#left-counted').text($_leftWords); // осталось добавить слов
 
    //вывод хронометража
-   var $_countChronometry = $_count * 1;
-   $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета
+   var $_countChronometry = ($_count / 2).toFixed();
+   $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета (сек)
 
 
-   console.log($_count);
+  //  console.log($_count);
    var main = $_count * 100;
    var value = (main / maxLetter);
 
@@ -352,7 +403,7 @@ $('#count-words').on('change keyup keydown', function() {
      }, 1);
    }
    else{
-     alert('Превышен лимит слов или не выставлен хронометраж текста!');
+    //  alert('Превышен лимит слов или не выставлен хронометраж текста!');
    }
 
   //  $("#chronometry-сalc").checked(1);
@@ -363,7 +414,7 @@ $('#count-words').on('change keyup keydown', function() {
 
 
 
-//функция офистки >60
+//функция очистки >60
 function clearTime (elem){
   $(elem).on('change', function(){
     var value = $(elem).val();
