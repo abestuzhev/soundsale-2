@@ -811,6 +811,15 @@ input[type=checkbox]:checked + .c-label_calc::after {
 .icon-style {
   background-image: url("../img/icon-style.png"); }
 
+.icon-product {
+  background-image: url("../img/icon-product.png"); }
+
+.icon-numberVotes {
+  background-image: url("../img/icon-numberVotes.png"); }
+
+.icon-votes {
+  background-image: url("../img/icon-votes.png"); }
+
 .icon-accompaniment {
   background-image: url("../img/icon-accompaniment.png"); }
 
@@ -954,6 +963,21 @@ input[type=checkbox]:checked + .c-label_calc::after {
   background-size: cover; }
   .section-chronometry .section_img img {
     width: 90%; }
+
+.section-product {
+  background-color: #6ecc08;
+  background: url("../img/slide-product.jpg") 0 0 no-repeat;
+  background-size: cover; }
+
+.section-numberVotes {
+  background-color: #6ecc08;
+  background: url("../img/slide-numberVotes.jpg") 0 0 no-repeat;
+  background-size: cover; }
+
+.section-votes {
+  background-color: #6ecc08;
+  background: url("../img/slide-votes.jpg") 0 0 no-repeat;
+  background-size: cover; }
 
 .section-form-style {
   background: url("../img/form-style-bg.jpg") 0 0 no-repeat;
@@ -1274,7 +1298,8 @@ input[type=checkbox]:checked + .c-label_calc::after {
       border-radius: 6px;
       display: block;
       margin-bottom: 15px;
-      padding: 10px; }
+      padding: 10px;
+      resize: vertical; }
     .slide-chronometry .text-entry_slide {
       margin-bottom: 15px; }
       .slide-chronometry .text-entry_slide-horizontal {
@@ -1341,6 +1366,24 @@ input[type=checkbox]:checked + .c-label_calc::after {
       font-size: 14px;
       font-weight: 400;
       text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.14); }
+
+.slide-product .text-entry_area {
+  text-align: left;
+  background-color: #fff;
+  height: 102px;
+  width: 70%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 10px;
+  resize: vertical; }
+
+.slide-numberVotes .section_title {
+  font-size: 2.5em;
+  margin-top: 34px; }
+
+.slide-votes .section_small-title {
+  color: #1c3344;
+  font: 700 18px "Open Sans", sans-serif; }
 
 .slide-incidental {
   position: relative; }
@@ -1675,6 +1718,9 @@ input[type=checkbox]:checked + .c-label_calc::after {
 .slide-view,
 .slide-type,
 .slide-chronometry,
+.slide-product,
+.slide-numberVotes,
+.slide-votes,
 .slide-form-style,
 .slide-incidental,
 .slide-accent,
