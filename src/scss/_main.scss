@@ -83,6 +83,16 @@
   background: url($img-dir + 'slide-votes.jpg') 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size:  cover;
+  
+  .c-arrow-down {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    left: auto;
+    bottom: auto;
+  }
 }
 
 .section-form-style {
@@ -664,11 +674,20 @@
   .section_title {
     font-size: 2.5em;
       margin-top:34px;
+      margin-bottom: 10px;
+  }
+
+  .votes-result {
+    color:#fff;
+    font: 600 14px/1em $font-text;
+    text-align: center;
   }
 }
 
 //slide-votes
 .slide-votes {
+  margin-top: 65px;
+
   .section_small-title {
     color:#1c3344;
     font: 700 18px $font-text;
@@ -1147,7 +1166,6 @@
 .slide-chronometry,
 .slide-product,
 .slide-numberVotes,
-.slide-votes,
 .slide-form-style,
 .slide-incidental,
 .slide-accent,

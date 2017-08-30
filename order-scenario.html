@@ -378,10 +378,56 @@
           </div>
         </div><!--end grid-->
         <h2 class="section_title">Тип голоса</h2>
-
-        <div class="text-entry">
-          <div class="text-entry_box"><textarea id="count-words" class="text-entry_area" name="name" rows="" cols="" placeholder="Начните вводить текст..."></textarea></div>
-        </div>
+        <div class="grid">
+          <div class="grid_column">
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label" for="votes-man-speaker">Мужской</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Детский (5-15)</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Молодой (15-20)</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Средний (25-35)</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Взрослый (35 и выше)</label>
+            </div>
+            <a href="#" class="btn-votes">Список голосов</a>
+            <div class="votes-result">Мужской голос <span>1</span></div>
+          </div><!--end grid_column-->
+          <div class="grid_column">
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label" for="votes-man-speaker">Мужской</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Детский (5-15)</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Молодой (15-20)</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Средний (25-35)</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label--small" for="votes-man-speaker">Взрослый (35 и выше)</label>
+            </div>
+            <a href="#" class="btn-votes">Список голосов</a>
+            <div class="votes-result">Мужской голос <span>1</span></div>
+          </div>
+        </div><!-- end grid -->
 
       </div><!--end slide-chronometry-->
     </div><!--end container-layout-->
@@ -411,144 +457,190 @@
           <div class="grid_column">
             <h4 class="section_small-title">Мужские:</h4>
             <div class="grid_item">
-              <input type="checkbox" id="votes-speaker" name="musical-direction">
-              <label class="c-label" for="speaker">Диктор</label>
+              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
+              <label class="c-label" for="votes-man-speaker">Диктор</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-game" name="votes-man">
-              <label class="c-label" for="votes-">Игровой</label>
+              <input type="checkbox" id="votes-man-game" name="votes-man">
+              <label class="c-label" for="votes-man-game">Игровой</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-brutal" name="votes-man">
-              <label class="c-label" for="votes-brutal">Брутальный</label>
+              <input type="checkbox" id="votes-man-brutal" name="votes-man">
+              <label class="c-label" for="votes-man-brutal">Брутальный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-calm" name="votes-man">
-              <label class="c-label" for="votes-calm">Спокойный</label>
+              <input type="checkbox" id="votes-man-calm" name="votes-man">
+              <label class="c-label" for="votes-man-calm">Спокойный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-aggressive" name="votes-man">
-              <label class="c-label" for="votes-aggressive">Агрессивный</label>
+              <input type="checkbox" id="votes-man-aggressive" name="votes-man">
+              <label class="c-label" for="votes-man-aggressive">Агрессивный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-melodic" name="votes-man">
-              <label class="c-label" for="votes-melodic">Мелодичный</label>
+              <input type="checkbox" id="votes-man-melodic" name="votes-man">
+              <label class="c-label" for="votes-man-melodic">Мелодичный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-melancholy" name="votes-man" checked>
-              <label class="c-label" for="votes-melancholy">Меланхоличный</label>
+              <input type="checkbox" id="votes-man-melancholy" name="votes-man" checked>
+              <label class="c-label" for="votes-man-melancholy">Меланхоличный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-call-up" name="votes-man" checked>
-              <label class="c-label" for="votes-call-up">Призывной</label>
+              <input type="checkbox" id="votes-man-call-up" name="votes-man" checked>
+              <label class="c-label" for="votes-man-call-up">Призывной</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-mayakovsky" name="votes-man">
-              <label class="c-label" for="votes-mayakovsky">Маяковский</label>
+              <input type="checkbox" id="votes-man-mayakovsky" name="votes-man">
+              <label class="c-label" for="votes-man-mayakovsky">Маяковский</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-levitan" name="votes-man">
-              <label class="c-label" for="votes-levitan">Левитан</label>
-            </div>
-            <!-- <div class="grid_item">
-              <input type="checkbox" id="votes-sex" name="votes-man">
-              <label class="c-label" for="votes-sex">Секс</label>
-            </div>
+              <input type="checkbox" id="votes-man-levitan" name="votes-man">
+              <label class="c-label" for="votes-man-levitan">Левитан</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="votes-santa-claus" name="votes-man">
-              <label class="c-label" for="votes-santa-claus">Дед Мороз</label>
-            </div> -->
+              <input type="checkbox" id="votes-man-sex" name="votes-man">
+              <label class="c-label" for="votes-man-sex">Секс</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-man-santa-claus" name="votes-man">
+              <label class="c-label" for="votes-man-santa-claus">Дед Мороз</label>
+            </div>
           </div><!--end grid-column-->
 
           <div class="grid_column">
             <h4 class="section_small-title">Женский:</h4>
             <div class="grid_item">
-              <input type="checkbox" id="fast" name="tempo" checked="checked">
-              <label class="c-label" for="fast">Быстрый</label>
+              <input type="checkbox" id="votes-woman-tender" name="votes-woman" checked>
+              <label class="c-label" for="votes-woman-tender">Нежный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="middle" name="tempo">
-              <label class="c-label" for="middle">Средний</label>
+              <input type="checkbox" id="votes-woman-romantic" name="votes-woman">
+              <label class="c-label" for="votes-woman-romantic">Романтичный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="slow" name="tempo">
-              <label class="c-label" for="slow">Медленный</label>
+              <input type="checkbox" id="votes-woman-summery" name="votes-woman">
+              <label class="c-label" for="votes-woman-summery">Летний</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="melodic" name="tempo" checked="checked">
-              <label class="c-label" for="melodic">Мелодичный</label>
+              <input type="checkbox" id="votes-woman-easy" name="votes-woman" checked>
+              <label class="c-label" for="votes-woman-easy">Лёгкий</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="romantic" name="tempo">
-              <label class="c-label" for="romantic">Романтичный</label>
+              <input type="checkbox" id="votes-woman-grandmother" name="votes-woman">
+              <label class="c-label" for="votes-woman-grandmother">Бабушка</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="neutral" name="tempo">
-              <label class="c-label" for="neutral">Нейтральный</label>
+              <input type="checkbox" id="votes-woman-speaker" name="votes-woman">
+              <label class="c-label" for="votes-woman-speaker">Диктор</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="circus" name="tempo">
-              <label class="c-label" for="circus">Цирковая</label>
+              <input type="checkbox" id="votes-woman-game" name="votes-woman">
+              <label class="c-label" for="votes-woman-game">Игровой</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="sports" name="tempo">
-              <label class="c-label" for="sports">Спортивная</label>
+              <input type="checkbox" id="votes-woman-calm" name="votes-woman">
+              <label class="c-label" for="votes-woman-calm">Спокойный</label>
             </div>
             <div class="grid_item">
-              <input type="checkbox" id="glamorous" name="tempo">
-              <label class="c-label" for="glamorous">Гламурная</label>
+              <input type="checkbox" id="votes-woman-aggressive" name="votes-woman">
+              <label class="c-label" for="votes-woman-aggressive">Агресивыный</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-woman-melodic" name="votes-woman">
+              <label class="c-label" for="votes-woman-melodic">Мелодичный</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-woman-melancholy" name="votes-woman">
+              <label class="c-label" for="votes-woman-melancholy">Меланхоличный</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-woman-call-up" name="votes-woman">
+              <label class="c-label" for="votes-woman-call-up">Призывной</label>
+            </div>
+            <div class="grid_item">
+              <input type="checkbox" id="votes-woman-sex" name="votes-woman">
+              <label class="c-label" for="votes-woman-sex">Секс</label>
             </div>
           </div><!--end grid-column-->
 
           <div class="grid_column">
             <h4 class="section_small-title">Акцент:</h4>
             <div class="grid_item">
-              <input type="radio" id="india" name="nationality">
-              <label class="c-label" for="india">Индия</label>
+              <input type="radio" id="votes-accent-no" name="votes-accent" cheked>
+              <label class="c-label" for="votes-accent-no">Без акцента</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="china" name="nationality">
-              <label class="c-label" for="china">Китай</label>
+              <input type="radio" id="votes-accent-india" name="votes-accent">
+              <label class="c-label" for="votes-accent-india">Индия</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="caucasus" name="nationality">
-              <label class="c-label" for="caucasus">Кавказ</label>
+              <input type="radio" id="votes-accent-scandinavian" name="votes-accent">
+              <label class="c-label" for="votes-accent-scandinavian">Скандинавский</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="japan" name="nationality">
-              <label class="c-label" for="japan">Япония</label>
+              <input type="radio" id="votes-accent-china" name="votes-accent">
+              <label class="c-label" for="votes-accent-china">Китай</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="brazil" name="nationality">
-              <label class="c-label" for="brazil">Бразилия</label>
+              <input type="radio" id="votes-accent-caucasus" name="votes-accent">
+              <label class="c-label" for="votes-accent-caucasus">Кавказ</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="africa" name="nationality">
-              <label class="c-label" for="africa">Африка</label>
+              <input type="radio" id="votes-accent-japan" name="votes-accent">
+              <label class="c-label" for="votes-accent-japan">Япония</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="europe" name="nationality" checked="checked">
-              <label class="c-label" for="europe">Европа</label>
+              <input type="radio" id="votes-accent-brazil" name="votes-accent">
+              <label class="c-label" for="votes-accent-brazil">Бразилия</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="russia" name="nationality">
-              <label class="c-label" for="russia">Русская народная</label>
+              <input type="radio" id="votes-accent-africa" name="votes-accent">
+              <label class="c-label" for="votes-accent-africa">Африка</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="jews" name="nationality">
-              <label class="c-label" for="jews">Еврейские народные мотивы</label>
+              <input type="radio" id="votes-accent-europe" name="votes-accent" checked>
+              <label class="c-label" for="votes-accent-europe">Европа</label>
             </div>
             <div class="grid_item">
-              <input type="radio" id="tajikistan" name="nationality">
-              <label class="c-label" for="tajikistan">Таджикистан</label>
+              <input type="radio" id="votes-accent-russia" name="votes-accent">
+              <label class="c-label" for="votes-accent-russia">Русская народная</label>
+            </div>
+            <div class="grid_item">
+              <input type="radio" id="votes-accent-jews" name="votes-accent">
+              <label class="c-label" for="votes-accent-jews">Еврейские народные мотивы</label>
             </div>
           </div><!--end grid-column-->
         </div><!--end grid-->
         <div class="grid grid--full">
+          <h4 class="section_small-title">Иностранные языки (диктор, носитель языка):</h4>
           <div class="grid_column">
-            <input type="radio" id="incidental-auto" name="incidental" checked="checked">
-            <label class="c-label" for="incidental-auto">Довериться специалистам</label>
+            <div class="grid_item">
+              <input type="radio" id="votes-language-english" name="votes-foreign-languages" cheked>
+              <label class="c-label" for="votes-language-english">Английский</label>
+            </div>
+            <div class="grid_item">
+              <input type="radio" id="votes-language-german" name="votes-foreign-languages">
+              <label class="c-label" for="votes-language-german">Немецкий</label>
+            </div>
+          </div>
+          <div class="grid_column">
+            <div class="grid_item">
+              <input type="radio" id="votes-language-french" name="votes-foreign-languages">
+              <label class="c-label" for="votes-language-french">Французский</label>
+            </div>
+            <div class="grid_item">
+              <input type="radio" id="votes-language-spanish" name="votes-foreign-languages">
+              <label class="c-label" for="votes-language-spanish">Испанский</label>
+            </div>
+          </div>
+          <div class="grid_column">
+            <div class="grid_item">
+              <input type="radio" id="votes-language-italian" name="votes-foreign-languages">
+              <label class="c-label" for="votes-language-italian">Итальянский</label>
+            </div>
+            <div class="grid_item">
+              <input type="radio" id="votes-language-finnish" name="votes-foreign-languages">
+              <label class="c-label" for="votes-language-finnish">Финский</label>
+            </div>
           </div>
         </div><!--end grid-->
 
