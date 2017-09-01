@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>filter</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js"></script>
+    <script type="text/javascript" src="js/mixedFilter.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      .mix{
+        display:none;
+        background-color:black;
+        color: white;
+        margin:10px;
+         padding: 10px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="col-md-12">
+      <div class="sidebar-content">
+        <h2 class="title">Filtro combinado MIXITUP</h2>
+
+    <!--<div class="search"><input class="search-input" id="search" type="text" name="search" placeholder="Buscar por nombre"><i class="fa fa-search" aria-hidden="true"></i></div>-->
+
+        <!-- Inicio FORM -->
+        <div class="form">
+          <form id="Filters">
+            <!-- Inicio INPUT:SELECT -->
+            <!--<div class="group">
+              <fieldset>
+                <select>
+                          <option class="unselected" value="">Todos</option>
+                          <option value=".value1">value1</option>
+                          <option value=".value2">value2</option>
+                          <option value=".value3">value3</option>
+                       </select>
+              </fieldset>
+            </div>-->
+            <!-- Termina INPUT:SELECT -->
+            <!-- Inicio CHECKBOX -->
+            <div class="group">
+              <div class="checkbox">
+                <fieldset>
+                  <input type="checkbox" value=".value1" />Value1
+                </fieldset>
+              </div>
+              <!-- Termina CHECKBOX -->
+              <!-- Inicio CHECKBOX -->
+              <div class="group">
+                <div class="checkbox">
+                  <fieldset>
+                    <input type="checkbox" value=".value2" />Value2
+                  </fieldset>
+                </div>
+                <!-- Termina CHECKBOX -->
+              </div>
+              <div class="group">
+                <div class="checkbox">
+                  <fieldset>
+                    <input type="checkbox" value=".value3" />Value3
+                  </fieldset>
+                </div>
+                <!-- Termina CHECKBOX -->
+              </div>
+          </form>
+          </div>
+        </div>
+        <!-- Termina FORM -->
+      </div>
+        <!-- Inicio  CONTENT -->
+        <div id="Container" class="row">
+          <div class="col-md-12 mix value1">
+              Value1
+            </div>
+          <div class="col-md-12 mix value2">
+              Value2
+            </div>
+          <div class="col-md-12 mix value2 value1">
+             Value1 y Value2
+            </div>
+            <!-- TERMINA CARD -->
+            <!-- Inicio CARD -->
+          <div class="col-md-12 mix value3">
+              Value3
+            </div>
+        </div>
+        <!-- Termina CONTENT -->
+
+          </div>
+  </body>
+</html>

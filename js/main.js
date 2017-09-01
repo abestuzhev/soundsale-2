@@ -52,8 +52,8 @@ $("body").on("click", ".file-button_remove", function (e) {
 
 
 
-    //добавление буквы
-    function addLetter (){
+    //добавление буквы с помощью кнопок
+    /*function addLetter (){
         $(".accent-letter_add-letter").click(function(e){
             var count = $(this).parents(".accent-letter_btn-box").siblings(".accent-letter_list").find(".accent-letter_item").length + 1;
             var countBox = $(".accent-letter_box").length;
@@ -72,16 +72,70 @@ $("body").on("click", ".file-button_remove", function (e) {
             });
         });
     }
-    addLetter();
+    addLetter();*/
+    //добавление буквы с помощью клавиш
+    function addLetterKey (){
 
-    // удаление буквы
-    function removeLetter (){
-        $(".accent-letter_remove-letter").click(function(e){
-            e.preventDefault();
-            $(this).parents(".accent-letter_btn-box").siblings(".accent-letter_list").find(".accent-letter_item:last-child").remove();
-        });
+      $('.accent-letter_input').on('keyup', function(eventObject){
+        if(eventObject.which >= 45 && eventObject.which <= 90) {
+          var count = $(".accent-letter_list").find(".accent-letter_item").length + 1;
+          var countBox = $(".accent-letter_box").length;
+
+          console.log('условие выполняется');
+          // e.preventDefault();
+          var $accentTemplate = $(
+              '<div class="accent-letter_item">' +
+              '<input id="accent-letter_radio-' + count + countBox +'" type="radio" name="accent' +  countBox +'">' +
+              '<label for="accent-letter_radio-' + count + countBox +'" class="accent-letter_radio"></label>' +
+              '<input type="text" class="accent-letter_input">' +
+              '</div>'
+          );
+          // $(".accent-letter_list").append($accentTemplate).find('.accent-letter_input').focus();
+          $(".accent-letter_list").append($accentTemplate).children('.accent-letter_input').val(eventObject);
+
+
+          // $('.accent-letter_item').each(function(index, elem){
+          //   var $inputWord = $(this).find('.accent-letter_input').val();
+          //   // var $inputWord = $(elem).val();
+          //   // var $inputWord = $('.accent-letter_input').val();
+          //   console.log($inputWord);
+          //   if($inputWord != 0) {
+          //
+          //   }
+          // });
+
+
+
+
+          $('.accent-letter_input').mask('*', {'translation': {
+              "*": {pattern: /[^]/}}
+          });
+        }
+      });
     }
-    removeLetter();
+    addLetterKey();
+
+
+
+
+    // удаление буквы с помощью кнопок
+    // function removeLetter (){
+    //     $(".accent-letter_remove-letter").click(function(e){
+    //         e.preventDefault();
+    //         $(this).parents(".accent-letter_btn-box").siblings(".accent-letter_list").find(".accent-letter_item:last-child").remove();
+    //     });
+    // }
+    // removeLetter();
+    //удаление буквы с помощью клавиши Backspace
+    function removeLetterSpace (){
+      $('.accent-letter_input').on('keyup',function(eventObject){
+        if(eventObject.which == 8) {
+          $(".accent-letter_list").find(".accent-letter_item:last-child").remove()
+          $(".accent-letter_list").find(".accent-letter_item:last-child").find('.accent-letter_input').focus();
+        }
+      });
+    }
+    removeLetterSpace();
 
 
 
@@ -317,6 +371,9 @@ $("body").on("click", ".file-button_remove", function (e) {
 //счетчик слов
 var maxLetter;
 
+
+
+
 $(".text-entry_time-number").on('change', function(){
 
     var timeMin = $("#text-entry_time-min").val() * 60;
@@ -339,6 +396,9 @@ $(".text-entry_time-number").on('change', function(){
 // });
 
 $('#count-words').on('change', function() {
+
+
+
 
    var $word_arr = $.trim($('#count-words').val()).split(' ');
    console.log('исходный массив ' + $word_arr);
@@ -381,33 +441,43 @@ $('#count-words').on('change', function() {
   //  $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
 
 
-  //количество слов
-   $('.word-count_line').find('#counted').text($_count); // Вывод подсчета (слов)
-
-   //вывод остатка слов
-   var $_leftWords = maxLetter - $_count;
-   $('.leftWords_box').find('#left-counted').text($_leftWords); // осталось добавить слов
-
-   //вывод хронометража
-   var $_countChronometry = ($_count / 2).toFixed();
-   $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета (сек)
 
 
-  //  console.log($_count);
-   var main = $_count * 100;
-   var value = (main / maxLetter);
 
-   if($_count <= maxLetter){
-     $('.text-entry_slide-range').animate({
-       "width": value+'%',
-     }, 1);
-   }
-   else{
-    //  alert('Превышен лимит слов или не выставлен хронометраж текста!');
-   }
+
+
+   //количество слов
+    $('.word-count_line').find('#counted').text($_count); // Вывод подсчета (слов)
+
+    //вывод остатка слов
+    var $_leftWords = maxLetter - $_count;
+    $('.leftWords_box').find('#left-counted').text($_leftWords); // осталось добавить слов
+
+    //вывод хронометража
+    var $_countChronometry = ($_count / 2).toFixed();
+    $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета (сек)
+
+
+   //  console.log($_count);
+    var main = $_count * 100;
+    var value = (main / maxLetter);
+
+    if($_count <= maxLetter){
+      $('.text-entry_slide-range').animate({
+        "width": value+'%',
+      }, 1);
+    }
+    else{
+     //  alert('Превышен лимит слов или не выставлен хронометраж текста!');
+    }
+
+
+    
 
   //  $("#chronometry-сalc").checked(1);
- });
+});/*закончились изменения в textarea*/
+
+
 
  $("#text-entry_time-min").mask('0');
  $("#text-entry_time-sec").mask('00');
