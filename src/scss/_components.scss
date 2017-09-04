@@ -611,3 +611,73 @@
     }
   }
 }
+
+.popup {
+  position: absolute;
+  z-index: 99999;
+  width: 900px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 14px;
+  overflow-x: hidden;
+
+  &-header {
+    background-color: #42a7b6;
+    padding: 12px 0px;
+
+    &_title {
+      text-align: center;
+      color:#fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+  }
+
+  &-body {
+    padding: 16px;
+  }
+
+  &-box {
+    border: 1px solid #818181;
+    border-radius: 4px;
+    margin-bottom: 11px;
+
+    &_header {
+      background-color: #ced8e2;
+      padding: 7px 0px;
+    }
+
+    &_title {
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 25px;
+      color:#292943;
+    }
+
+    &_body {
+
+    }
+  }
+}
+
+.popup-numberVotes {
+
+  .popup-type {
+    width: 60%;
+  }
+
+  .popup-lang {
+    width: 40%;
+  }
+
+  .popup-accent {
+  }
+
+  .popup-search-result {
+
+  }
+}

@@ -21,6 +21,15 @@
     width: 60%;
   }
 
+  .section-product .section_img img {
+    width: 43%;
+  }
+
+  
+  .section-numberVotes .section_img img {
+    width: 56%;
+  }
+
   .section {
     padding-top: 66px;
   }
@@ -124,7 +133,10 @@
   .slide-form-style,
   .slide-incidental,
   .slide-accent,
-  .slide-law {
+  .slide-law,
+  .slide-product,
+  .slide-numberVotes,
+  .slide-votes {
     width: 100%;
     position: static;
     transform: none;
