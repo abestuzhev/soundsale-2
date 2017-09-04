@@ -21,12 +21,17 @@
   <!--<script type="text/javascript" src="js/scrolloverflow.js"></script>-->
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js"></script> -->
   <!-- <script type="text/javascript" src="js/mixedFilter.js"></script> -->
-  <script type="text/javascript" src="js/mixitup.min.js"></script>
+  <!-- <script type="text/javascript" src="js/mixitup.min.js"></script> -->
 
-  <script type="text/javascript" src="js/examples.js"></script>
+  <!-- <script type="text/javascript" src="js/examples.js"></script> -->
   <script src="bower_components/mediaelement/build/mediaelement-and-player.min.js"></script>
-  <script src="js/jquery.sumoselect.js"></script>
-  <script src="js/main.js"></script>
+  <!-- <script src="js/jquery.sumoselect.js"></script> -->
+
+  <!-- filter -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/filter-style.css" /> -->
+
+
+  <!-- <script src="js/main.js"></script> -->
 
 
 
@@ -61,476 +66,483 @@
     <div class="container-layout">
       <h2 class="section_title">Наши работы</h2>
 
-    <div class="controls">
-      <button type="button" class="works-control works-control-submenu" data-filter="all">Все</button>
-      <button type="button" class="works-control" data-filter=".filter-radio">Реклама на радио</button>
-      <button type="button" class="works-control" data-filter=".filter-shop">Реклама в торговых центрах</button>
-      <button type="button" class="works-control" data-filter=".filter-tv">Звук для ТВ</button>
-      <button type="button" class="works-control" data-filter=".filter-answerphone">Автоответчики</button>
-    </div>
-    <ul class="sub-controls">
-      <button class="sub-controls__item" data-filter=".filter-1">Продажа автомобилей</button>
-      <button class="sub-controls__item" data-filter=".filter-2">Автотематика</button>
-      <button class="sub-controls__item" data-filter=".filter-3">Строительство</button>
-      <button class="sub-controls__item" data-filter=".filter-4">Ремонты</button>
-      <button class="sub-controls__item" data-filter=".filter-5">Продажа шуб</button>
-      <button class="sub-controls__item" data-filter=".filter-6">Кофейня</button>
-      <button class="sub-controls__item" data-filter=".filter-7">Продажа автомобилей1</button>
-      <button class="sub-controls__item" data-filter=".filter-8">Автотематика1</button>
-      <button class="sub-controls__item" data-filter=".filter-9">Строительство1</button>
-      <button class="sub-controls__item" data-filter=".filter-10">Ремонты1</button>
-      <button class="sub-controls__item" data-filter=".filter-11">Продажа шуб1</button>
-      <button class="sub-controls__item" data-filter=".filter-12">Кофейня1</button>
-    </ul>
 
-      <div class="works-filter">
-        <!--<form class="works-filter_list" method="#" action="#" id="filters">
-          <div class="works-filter_item">
-            <input type="checkbox" id="works_radio-all" data-filter="all" name="works-filter">
-            <label for="works_radio-all">Все</label>
-          </div>
-          <div class="works-filter_item">
-            <input type="checkbox" id="works_radio-ads" data-filter=".filter-radio" name="works-filter">
-            <label for="works_radio-ads">Реклама на радио</label>
-          </div>
-          <div class="works-filter_item">
-            <input type="checkbox" id="works_advertising-shop" data-filter=".filter-shop" name="works-filter">
-            <label for="works_advertising-shop">Реклама в торговых центрах</label>
-          </div>
-          <div class="works-filter_item">
-            <input type="checkbox" id="works_sound-tv" data-filter=".filter-tv" name="works-filter">
-            <label for="works_sound-tv">Звук для ТВ</label>
-          </div>
-          <div class="works-filter_item">
-            <input type="checkbox" id="works_answerphone" data-filter=".filter-answerphone" name="works-filter">
-            <label for="works_answerphone">Автоответчики</label>
-          </div>
-        </form>-->
-        <!--<div class="works-filter_select">-->
-            <!--<div class="works-filter_text">Тематика:</div>-->
-            <!--<select class="SlectBox" placeholder="Не выбрана">-->
-              <!--<option value="Архангельск">Рэп</option>-->
-              <!--<option value="Северодвинск">Рок</option>-->
-              <!--<option value="Новодвинск">Поп</option>-->
-            <!--</select>-->
-        <!--</div>-->
-      </div><!--works-filter-->
-      <div id="container">
 
-        <div class="works_item mix filter-radio filter-1">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
 
-        <div class="works_item mix filter-radio filter-1">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
 
-        <div class="works_item mix filter-radio filter-2">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
 
-        <div class="works_item mix filter-shop filter-2">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
+      <div class="container">
+      	<aside class="topbar">
 
-        <div class="works_item mix filter-shop filter-3">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
+      		<div class="filter-group">
+      			<ul id="type-advertising" class="filters filters--color">
+      				<li class="works-control active">
+      						<a class="works-control_link" href="#" data-filter="*">All</a>
+      				</li>
+      				<li class="works-control">
+      					<a class="works-control_link" href="#" data-filter=".grid-item--radio">Реклама на радио</a>
+      				</li>
+      				<li class="works-control">
+      					<a class="works-control_link" href="#" data-filter=".grid-item--shop">Реклама в торговых центрах</a>
+      				</li>
+      				<li class="works-control">
+      					<a class="works-control_link" href="#" data-filter=".grid-item--tv">Звук для ТВ</a>
+      				</li>
+              <li class="works-control">
+      					<a class="works-control_link" href="#" data-filter=".grid-item--answerphone">Автоответчик</a>
+      				</li>
+      			</ul>
+      		</div>
 
-        <div class="works_item mix filter-shop filter-4">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
+      		<div class="filter-group">
+      			<ul id="shape-filters" class="filters filters--shape">
+      				<li class="sub-controls__item">
+                <input type="checkbox" id="grid-item--sale-auto" name="shape-filter" value=".grid-item--sale-auto" />
+      					<label for="grid-item--sale-auto">Продажа автомобилей</label>
+      				</li>
+      				<li class="sub-controls__item">
+                <input type="checkbox" id="grid-item--auto" name="shape-filter" value=".grid-item--auto" />
+      					<label for="grid-item--auto">Автотематика</label>
+      				</li>
+      				<li class="sub-controls__item">
+                <input type="checkbox" id="grid-item--building" name="shape-filter" value=".grid-item--building" />
+      					<label for="grid-item--building">Строительство</label>
+      				</li>
+      				<li class="sub-controls__item">
+                <input type="checkbox" id="grid-item--repairs" name="shape-filter" value=".grid-item--repairs" />
+      					<label for="grid-item--repairs">Ремонты</label>
+      				</li>
+      				<li class="sub-controls__item">
+                <input type="checkbox" id="grid-item--sale-coat" name="shape-filter" value=".grid-item--sale-coat" />
+      					<label for="grid-item--sale-coat">Продажа шуб</label>
+      				</li>
+      				<li class="sub-controls__item">
+                <input type="checkbox" id="grid-item--coffee" name="shape-filter" value=".grid-item--coffee" />
+      					<label for="grid-item--coffee">Кофейня</label>
+      				</li>
+      			</ul>
+      		</div>
+      	</aside>
 
-        <div class="works_item mix filter-shop filter-5">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
+      	<main class="main">
+      		<section class="grid">
+      			<div class="">
 
-        <div class="works_item mix filter-tv filter-6">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
+              <div class="works_item grid-item grid-item--radio grid-item--sale-auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей по радио</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--radio grid-item--sale-auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--radio grid-item--auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--shop grid-item--auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--shop grid-item--auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--shop grid-item--auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--shop grid-item--auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--tv grid-item--sale-auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
+              <div class="works_item grid-item grid-item--tv grid-item--auto">
+                <div class="c-card-works">
+                  <div class="c-card-works_item">
+                    <section class="player-layout">
+                      <h3 class="player-layout_title">Продажа автомобилей</h3>
+                      <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+                    </section><!--audio-player-->
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_order">Хочу такой же</a>
+                  </div>
+                  <div class="c-card-works_item">
+                    <a href="#" class="c-card-works_passport">Паспорт ролика</a>
+                    <a href="#" class="c-card-works_passport-turn">Свернуть</a>
+                  </div>
+                </div>
+                <div class="c-card-works_info">
+                  <ul class="c-card-works_info-list">
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">голос (псевдоним): </span>
+                      <span class="c-card-works_info-text">Марат Куликов</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
+                      <span class="c-card-works_info-text">2 минуты 35 секунд</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
+                      <span class="c-card-works_info-text">Ролик для торгового центра</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
+                      <span class="c-card-works_info-text">Игровой</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
+                      <span class="c-card-works_info-text">Окна</span>
+                    </li>
+                    <li class="c-card-works_info-item">
+                      <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
+                      <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
+                    </li>
+                  </ul>
+                </div><!--c-card-works_info-->
+              </div><!--works_item-->
 
-        <div class="works_item mix filter-tv filter-3">
-          <div class="c-card-works">
-            <div class="c-card-works_item">
-              <section class="player-layout">
-                <h3 class="player-layout_title">Радиоанонс игры</h3>
-                <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
-              </section><!--audio-player-->
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_order">Хочу такой же</a>
-            </div>
-            <div class="c-card-works_item">
-              <a href="#" class="c-card-works_passport">Паспорт ролика</a>
-              <a href="#" class="c-card-works_passport-turn">Свернуть</a>
-            </div>
-          </div>
-          <div class="c-card-works_info">
-            <ul class="c-card-works_info-list">
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">голос (псевдоним): </span>
-                <span class="c-card-works_info-text">Марат Куликов</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ХРОНОМЕТРАЖ: </span>
-                <span class="c-card-works_info-text">2 минуты 35 секунд</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ВИД ПРОДУКЦИИ: </span>
-                <span class="c-card-works_info-text">Ролик для торгового центра</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">ТИП РОЛИКА: </span>
-                <span class="c-card-works_info-text">Игровой</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Рекламируемый продукт, услуга, предложение: </span>
-                <span class="c-card-works_info-text">Окна</span>
-              </li>
-              <li class="c-card-works_info-item">
-                <span class="c-card-works_info-name">Музыкальное сопровождение: </span>
-                <span class="c-card-works_info-text">Eric Clapton - Rush (1992) – Preludin Fugue Eric Clapton - Rush (1992) – Realization</span>
-              </li>
-            </ul>
-          </div><!--c-card-works_info-->
-        </div><!--works_item-->
+
+
+      			</div>
+      		</section>
+      	</main>
       </div>
+
+
+
 
       <!--
         <div class="pagination">
@@ -539,7 +551,7 @@
           <div class="pagination_item"><a href="#" class="pagination_link">3</a></div>
         </div>
       -->
-    </div>
+    </div><!-- end container-layout -->
 
   </section>
 
@@ -593,20 +605,22 @@
   });
 
 </script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   $(document).ready(function() {
     $('.SlectBox').SumoSelect({
       placeholder: 'This is a placeholder',
       csvDispCount: 3
     });
 
-    // $('#container').mixItUp();
   });
-</script>
-  <script>
+</script> -->
+  <!-- <script>
       var containerEl = document.querySelector('#container');
 
       var mixer = mixitup(containerEl);
-  </script>
+  </script> -->
+
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 </html>

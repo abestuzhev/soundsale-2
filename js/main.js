@@ -7,8 +7,6 @@ $(document).ready(function () {
 
     //липкое меню
     // $(".horizontal-nav, .vertical-nav").stick_in_parent();
-
-
   $(window).scroll(function(){
     var topSlide1 = $("#firstPage").offset().top;
     var topSlide2 = $("#scenario").offset().top;
@@ -74,14 +72,25 @@ $("body").on("click", ".file-button_remove", function (e) {
     }
     addLetter();*/
     //добавление буквы с помощью клавиш
+    var countDefault;
+    $('.accent-letter_item').each(function(index, elem){
+        countDefault = $(".accent-letter_list").find(".accent-letter_item").length;
+        console.log('количество букв по умолчанию: ' + countDefault + 'шт.');
+    });
+
     function addLetterKey (){
 
-      $('.accent-letter_input').on('keyup', function(eventObject){
-        if(eventObject.which >= 45 && eventObject.which <= 90) {
+      $(document).on('keyup', '.accent-letter_input', function(eventObject){
+        $this = $(this);
+        if(eventObject.which >= 45 && eventObject.which <= 90 && $this.val() != 0) {
           var count = $(".accent-letter_list").find(".accent-letter_item").length + 1;
           var countBox = $(".accent-letter_box").length;
 
           console.log('условие выполняется');
+          $(".accent-letter_input").keypress(function() {
+
+          });/*окончание перескока на следующию букву*/
+
           // e.preventDefault();
           var $accentTemplate = $(
               '<div class="accent-letter_item">' +
@@ -90,8 +99,14 @@ $("body").on("click", ".file-button_remove", function (e) {
               '<input type="text" class="accent-letter_input">' +
               '</div>'
           );
-          // $(".accent-letter_list").append($accentTemplate).find('.accent-letter_input').focus();
+          // $(".accent-letter_list").append($accentTemplate).find('.accent-letter_input').focus();\
           $(".accent-letter_list").append($accentTemplate).children('.accent-letter_input').val(eventObject);
+          if($this.val() != 0){
+
+            // $(".accent-letter_list").append($accentTemplate).children('.accent-letter_input').val(eventObject);
+          }
+
+          $this.parent().next().find('.accent-letter_input').focus();
 
 
           // $('.accent-letter_item').each(function(index, elem){
@@ -104,16 +119,25 @@ $("body").on("click", ".file-button_remove", function (e) {
           //   }
           // });
 
-
-
-
           $('.accent-letter_input').mask('*', {'translation': {
               "*": {pattern: /[^]/}}
           });
-        }
-      });
-    }
-    addLetterKey();
+
+
+        }/*окончание условия*/
+
+      });/*окончание события keyup*/
+
+
+
+    }/*окончание функции addLetterKey*/
+    $(".accent-letter_input").keypress(function() {
+        $(this).parent().next().find('.accent-letter_input').focus();
+    });
+
+
+      addLetterKey();
+
 
 
 
@@ -126,6 +150,7 @@ $("body").on("click", ".file-button_remove", function (e) {
     //     });
     // }
     // removeLetter();
+
     //удаление буквы с помощью клавиши Backspace
     function removeLetterSpace (){
       $('.accent-letter_input').on('keyup',function(eventObject){
@@ -139,15 +164,6 @@ $("body").on("click", ".file-button_remove", function (e) {
 
 
 
-    //перескок на следующию букву
-    $(".accent-letter_input").keypress(function() {
-        $(this).parent().next().find('.accent-letter_input').focus();
-        $('.accent-letter_input').mask('*', {'translation': {
-            "*": {pattern: /[^]/}
-            //        Я: {pattern: /[А-Яа-я]/}
-          }
-        });
-    });
 
     //добавление слова
     $(".accent-letter_add-word").click(function(e){
@@ -368,12 +384,14 @@ $("body").on("click", ".file-button_remove", function (e) {
     });
 
     */
-//счетчик слов
+
+
+/*
+*******************************************************************
+счетчик слов
+*******************************************************************
+*/
 var maxLetter;
-
-
-
-
 $(".text-entry_time-number").on('change', function(){
 
     var timeMin = $("#text-entry_time-min").val() * 60;
@@ -383,39 +401,12 @@ $(".text-entry_time-number").on('change', function(){
 
   maxLetter = allTime*2;
 });
-//  var $word_arr
-// $('#count-words').on('change', function() {
-//    $word_arr = $.trim($('#count-words').val()).split(' ');
-//    console.log($word_arr);
-// });
-
-// var $_count;
-// $('#count-words').keyup(function() {
-//   $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
-//   console.log($_count);
-// });
 
 $('#count-words').on('change', function() {
-
-
-
 
    var $word_arr = $.trim($('#count-words').val()).split(' ');
    console.log('исходный массив ' + $word_arr);
    var $_count;
-  //  $.each($word_arr, function(index,value){
-   //
-  //    if(parseInt(value.length) > 3){
-  //       $_count = parseInt($.trim($(this).val()).split(' ').length);
-  //    }else {
-  //      $word_arr = value;
-  //    }
-  //    return $_count;
-  //  });
-
-   /*пример*/
-
-  //  var numbers = [-2, 5, 1, -5, -1, 1, 3, 4, -1];
 
   var filterArr = $.grep($word_arr, function(elem) {
 
@@ -430,59 +421,45 @@ $('#count-words').on('change', function() {
   console.log('количество слов: ' + filterArr.length);
   $_count = parseInt(filterArr.length); // приходит длина массива / 2
 
-  // var filter_num = filterArr.lenght;
-  // console.log('число слов ' + filter_num);
+  //рассчитать количество слов в textarea
+  $("#text-calculate_button").on("click", function(e){
+    e.preventDefault();
 
-  // $_count = filterArr.lenght;
-  // $_resarr =$.trim($(this).val()).split(' ');
+    //количество слов
+     $('.word-count_line').find('#counted').text($_count); // Вывод подсчета (слов)
 
+     //вывод остатка слов
+     var $_leftWords = maxLetter - $_count;
+     $('.leftWords_box').find('#left-counted').text($_leftWords); // осталось добавить слов
 
-  // console.log('$_resarr: ' + $_resarr);
-  //  $_count = parseInt($.trim($(this).val()).split(' ').length); // Подсчет слов
+     //вывод хронометража
+     var $_countChronometry = ($_count / 2).toFixed();
+     $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета (сек)
 
-
-
-
-
-
-
-   //количество слов
-    $('.word-count_line').find('#counted').text($_count); // Вывод подсчета (слов)
-
-    //вывод остатка слов
-    var $_leftWords = maxLetter - $_count;
-    $('.leftWords_box').find('#left-counted').text($_leftWords); // осталось добавить слов
-
-    //вывод хронометража
-    var $_countChronometry = ($_count / 2).toFixed();
-    $('.text-entry_slide-text').find('#countChronometry').text($_countChronometry); // Вывод подсчета (сек)
-
-
-   //  console.log($_count);
-    var main = $_count * 100;
-    var value = (main / maxLetter);
-
-    if($_count <= maxLetter){
-      $('.text-entry_slide-range').animate({
-        "width": value+'%',
-      }, 1);
-    }
-    else{
-     //  alert('Превышен лимит слов или не выставлен хронометраж текста!');
-    }
-
-
-    
+    //  console.log($_count);
+     var main = $_count * 100;
+     var value = (main / maxLetter);
+     if($_count <= maxLetter){
+       $('.text-entry_slide-range').animate({
+         "width": value+'%',
+       }, 1);
+     }
+     else{
+       alert('Превышен лимит слов или не выставлен хронометраж текста!');
+     }
+  });/*окончание рассчета количество слов*/
 
   //  $("#chronometry-сalc").checked(1);
 });/*закончились изменения в textarea*/
 
-
-
  $("#text-entry_time-min").mask('0');
  $("#text-entry_time-sec").mask('00');
 
+ //при выборе галки "Рассчитать хронометраж текста" делаем автофокус в поле со временем
 
+$('#chronometry-сalc').on('change', function(){
+  $('#text-entry_time-min').focus();
+});
 
 //функция очистки >60
 function clearTime (elem){
@@ -493,10 +470,8 @@ function clearTime (elem){
     }
   });
 }
-
 clearTime("#text-entry_time-min");
 clearTime("#text-entry_time-sec");
-
 
 //сброс textarea
 $(".text-entry_button").on("click", function(e){
@@ -516,10 +491,14 @@ $(".text-entry_button").on("click", function(e){
 
   $('.text-entry_slide-range').css("width", "0");
 });
-
-
-
-
-
 //окончание счетчик букв
+
+
+$('.works-control').on('click', function(e){
+  e.preventDefault();
+  console.log('добавляетсяется класс актив');
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
 });
+
+});//окончание ready

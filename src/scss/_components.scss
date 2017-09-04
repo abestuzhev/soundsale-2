@@ -318,7 +318,7 @@
     transform: translateX(-50%);
     background: url($img-dir + "icon-download.png") 0 0 no-repeat;
     width: 19px;
-    height: 16px;
+    height: 18px;
   }
 }
 
@@ -330,9 +330,7 @@
   background-color: #EFEFEE;
   border: 1px solid #C2C2C2;
   margin-bottom: 9px;
-  padding-left: 14px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px 14px;
   font-size: 0;
   position: relative;
 
@@ -346,7 +344,7 @@
   }
 
   .player-layout {
-    width: 615px;
+    width: 610px;
     background-color: transparent;
     box-shadow: none;
     border-radius: 0;
@@ -423,6 +421,7 @@
   &_info {
     display: none;
     position: relative;
+    z-index: 99999;
     top: -16px;
     width: 100%;
     background-color: #FFF;

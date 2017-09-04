@@ -130,6 +130,23 @@ p {
   opacity: .5;
 }
 
+input[type=text],
+input[type=password],
+textarea {
+  transition: all .08s ease-out;
+  border: none;
+  outline: none;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+  -webkit-box-shadow: 0px 0px 20px -2px rgba(10,84,109,0.64);
+  -moz-box-shadow: 0px 0px 20px -2px rgba(10,84,109,0.64);
+  box-shadow: 0px 0px 20px -2px rgba(10,84,109,0.64);
+  transition: all .08s ease-out;
+}
+
 input[type=radio],
 input[type=checkbox] {
   display: none;
