@@ -1111,39 +1111,221 @@
 
 <div class="popup popup-numberVotes">
   <div class="popup-header">
+    <img class="popup-header_icon" src="img/icon-popup-votes.png" alt="">
     <h3 class="popup-header_title">Выбор голоса</h3>
+    <div class="popup-close"></div>
   </div>
   <div class="popup-body">
+
     <div class="popup-box popup-type">
         <div class="popup-box_header">
           <div class="popup-box_title">Тип голоса</div>
         </div>
-        <div class="popup-box_body"></div>
+        <div class="popup-box_body">
+          <div class="popup-row">
+            <div class="popup-col-3">
+              <div class="c-popup-card">
+                <div class="c-popup-card_title">
+                  <img class="c-popup-card_title-img" src="img/icon-popup-man.png">
+                  <div class="c-popup-card_title-text">Мужской</div>
+                </div>
+                <div class="c-popup-card_body">
+                  <input class="c-popup_radio" type="radio" id="" name="vote-type-man">
+                  <label class="c-popup_label">Молодой (до 25 лет)</label>
+                  <input class="c-popup_label" class="c-popup_radio" type="radio" id="" name="vote-type-man">
+                  <label class="c-popup_label">Средний (до 35 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="" name="vote-type-man">
+                  <label class="c-popup_label">Взрослый (до 55 лет)</label>
+                </div>
+              </div>
+            </div>
+            <div class="popup-col-3">
+              <div class="c-popup-card">
+                <div class="c-popup-card_title">
+                  <img class="c-popup-card_title-img" src="img/icon-popup-woman.png">
+                  <div class="c-popup-card_title-text">Женский</div>
+                </div>
+                <div class="c-popup-card_body">
+                  <input class="c-popup_radio" type="radio" id="" name="vote-type-woman">
+                  <label class="c-popup_label">Молодой (до 25 лет)</label>
+                  <input class="c-popup_label" class="c-popup_radio" type="radio" id="" name="vote-type-woman">
+                  <label class="c-popup_label">Средний (до 35 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="" name="vote-type-woman">
+                  <label class="c-popup_label">Взрослый (до 55 лет)</label>
+                </div>
+              </div>
+            </div>
+            <div class="popup-col-3">
+              <div class="c-popup-card">
+                <div class="c-popup-card_title">
+                  <img class="c-popup-card_title-img" src="img/icon-popup-children.png">
+                  <div class="c-popup-card_title-text">Детский</div>
+                </div>
+                <div class="c-popup-card_body">
+                  <input class="c-popup_radio" type="radio" id="" name="vote-type-children">
+                  <label class="c-popup_label">Десткий (до 15 лет)</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <div class="popup-box popup-lang">
       <div class="popup-box_header">
         <div class="popup-box_title">Язык</div>
       </div>
-      <div class="popup-box_body"></div>
+      <div class="popup-box_body">
+        <div class="popup-row">
+          <div class="popup-col-2">
+            <div class="c-popup-card">
+              <div class="c-popup-card_body">
+                <input class="c-popup_radio" type="radio" id="vote-lang-rus" name="vote-lang">
+                <label class="c-popup_label" for="vote-lang-rus">Русский</label>
+                <input class="c-popup_radio" type="radio" id="vote-lang-eng" name="vote-lang">
+                <label class="c-popup_label" for="vote-lang-eng">Английский</label>
+                <input class="c-popup_radio" type="radio" id="vote-lang-de" name="vote-lang">
+                <label class="c-popup_label" for="vote-lang-de">Немецкий</label>
+                <input class="c-popup_radio" type="radio" id="vote-lang-fr" name="vote-lang">
+                <label class="c-popup_label" for="vote-lang-fr">Французский</label>
+              </div>
+            </div>
+          </div>
+          <div class="popup-col-2">
+            <div class="c-popup-card">
+              <div class="c-popup-card_body">
+                <input class="c-popup_radio" type="radio" id="vote-lang-es" name="vote-lang">
+                <label class="c-popup_label" for="vote-lang-es">Испанский</label>
+                <input class="c-popup_radio" type="radio" id="vote-lang-it" name="vote-lang">
+                <label class="c-popup_label" for="vote-lang-it">Итальянский</label>
+                <input class="c-popup_radio" type="radio" id="vote-lang-fin" name="vote-lang">
+                <label class="c-popup_label" for="vote-lang-fin">Финский</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="popup-box popup-accent">
       <div class="popup-box_header">
         <div class="popup-box_title">Акцент</div>
       </div>
-      <div class="popup-box_body"></div>
+      <div class="popup-box_body">
+        <div class="popup-col-accent">
+          <input class="c-popup_radio" type="radio" id="vote-lang-es" name="vote-lang">
+          <label class="c-popup_label" for="vote-lang-es">Без акцента</label>
+        </div>
+        <div class="popup-col-accent">
+          <!-- мульти селект -->
+
+        </div>
+      </div>
     </div>
-    <div class="popup-search-result"></div>
+
+  </div>
+  <div class="popup-search-result">
+    <div class="popup-search-result_title">Результаты поиска</div>
+    <div class="popup-search-result_body">
+      <div class="works_item">
+        <div class="c-card-works">
+          <div class="c-card-works_item">
+            <section class="player-layout">
+              <h3 class="player-layout_title">Продажа автомобилей по радио</h3>
+              <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+            </section><!--audio-player-->
+          </div>
+          <div class="c-card-works_item">
+            <a href="#" class="c-card-works_order">Выбрать голос</a>
+          </div>
+        </div>
+      </div><!--works_item-->
+      <div class="works_item">
+        <div class="c-card-works">
+          <div class="c-card-works_item">
+            <section class="player-layout">
+              <h3 class="player-layout_title">Продажа автомобилей по радио</h3>
+              <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+            </section><!--audio-player-->
+          </div>
+          <div class="c-card-works_item">
+            <a href="#" class="c-card-works_order">Выбрать голос</a>
+          </div>
+        </div>
+      </div><!--works_item-->
+      <div class="works_item">
+        <div class="c-card-works">
+          <div class="c-card-works_item">
+            <section class="player-layout">
+              <h3 class="player-layout_title">Продажа автомобилей по радио</h3>
+              <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+            </section><!--audio-player-->
+          </div>
+          <div class="c-card-works_item">
+            <a href="#" class="c-card-works_order">Выбрать голос</a>
+          </div>
+        </div>
+      </div><!--works_item-->
+      <div class="works_item">
+        <div class="c-card-works">
+          <div class="c-card-works_item">
+            <section class="player-layout">
+              <h3 class="player-layout_title">Продажа автомобилей по радио</h3>
+              <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+            </section><!--audio-player-->
+          </div>
+          <div class="c-card-works_item">
+            <a href="#" class="c-card-works_order">Выбрать голос</a>
+          </div>
+        </div>
+      </div><!--works_item-->
+      <div class="works_item">
+        <div class="c-card-works">
+          <div class="c-card-works_item">
+            <section class="player-layout">
+              <h3 class="player-layout_title">Продажа автомобилей по радио</h3>
+              <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+            </section><!--audio-player-->
+          </div>
+          <div class="c-card-works_item">
+            <a href="#" class="c-card-works_order">Выбрать голос</a>
+          </div>
+        </div>
+      </div><!--works_item-->
+      <div class="works_item">
+        <div class="c-card-works">
+          <div class="c-card-works_item">
+            <section class="player-layout">
+              <h3 class="player-layout_title">Продажа автомобилей по радио</h3>
+              <audio class="audio-player" src="audio/demo.mp3" type="audio/mp3" controls="controls"></audio>
+            </section><!--audio-player-->
+          </div>
+          <div class="c-card-works_item">
+            <a href="#" class="c-card-works_order">Выбрать голос</a>
+          </div>
+        </div>
+      </div><!--works_item-->
+    </div>
+    <button class="popup-btn">Готово</button>
   </div>
 </div>
 <!--<script src="js/main.js"></script>-->
 <script type="text/javascript">
   $(document).ready(function () {
+
+    $('.audio-player').each(function() {
+      var source = $(this).attr('src');
+      if ( source != '' ) {
+        $(this).after('<a href="' + source + '" class="audio-download">Скачать</a>');
+      }
+    });
+
     $('.audio-player').mediaelementplayer({
       alwaysShowControls: true,
-      features: ['playpause', 'volume', 'progress', 'current', 'duration'],
+      features: ['playpause','volume','progress', 'current', 'duration'],
       audioVolume: 'horizontal',
       audioHeight: 30
     });
+
+
 
     // $("#js-horizontal-nav").stick_in_parent();
     // $("#js-vertical-nav").stick_in_parent();

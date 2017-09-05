@@ -712,11 +712,28 @@ input[type=checkbox]:checked + .c-label_calc::after {
           transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 14px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  text-align: center; }
+  .popup-close {
+    width: 20px;
+    height: 20px;
+    background: url(../img/popup-close.png) 0 0 no-repeat;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .popup-header {
     background-color: #42a7b6;
-    padding: 12px 0px; }
+    padding: 12px 0px;
+    position: relative; }
+    .popup-header_icon {
+      margin-right: 9px;
+      position: relative;
+      top: 2px; }
     .popup-header_title {
+      display: inline-block;
       text-align: center;
       color: #fff;
       font-weight: 700;
@@ -724,10 +741,19 @@ input[type=checkbox]:checked + .c-label_calc::after {
       font-size: 25px; }
   .popup-body {
     padding: 16px; }
+    .popup-body::after {
+      content: '';
+      display: table;
+      clear: both; }
   .popup-box {
     border: 1px solid #818181;
-    border-radius: 4px;
-    margin-bottom: 11px; }
+    border-radius: 6px;
+    margin-bottom: 11px;
+    text-align: center; }
+    .popup-box::after {
+      content: '';
+      display: table;
+      clear: both; }
     .popup-box_header {
       background-color: #ced8e2;
       padding: 7px 0px; }
@@ -737,12 +763,116 @@ input[type=checkbox]:checked + .c-label_calc::after {
       text-align: center;
       font-size: 25px;
       color: #292943; }
+    .popup-box_body {
+      padding: 7px 14px; }
+  .popup-search-result {
+    padding: 14px 17px;
+    background-color: #42a7b6;
+    width: 100%;
+    float: left; }
+    .popup-search-result_title {
+      text-align: center;
+      padding: 7px 0;
+      background-color: #fff;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 25px;
+      color: #292943; }
+    .popup-search-result_body {
+      overflow-y: scroll;
+      height: 230px; }
+  .popup-btn {
+    padding: 20px 110px;
+    margin: 10px 0;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 18px;
+    color: #0f7180;
+    outline: none;
+    border: none;
+    cursor: pointer; }
+  .popup .c-card-works {
+    width: 99%; }
+
+/*END popup*/
+.popup-row {
+  margin-left: -6px;
+  margin-right: -6px; }
+  .popup-row::after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.popup-col-3 {
+  width: 33.3333%;
+  float: left;
+  padding: 9px 6px; }
+
+.popup-col-2 {
+  width: 50%;
+  float: left;
+  padding: 0 6px; }
+
+.popup-col-accent {
+  display: inline-block; }
 
 .popup-numberVotes .popup-type {
-  width: 60%; }
+  width: 62%;
+  float: left;
+  max-height: 237px; }
 
 .popup-numberVotes .popup-lang {
-  width: 40%; }
+  width: 37%;
+  float: right;
+  min-height: 237px; }
+
+.popup-numberVotes .popup-accent {
+  width: 100%;
+  float: left;
+  margin-bottom: 0; }
+  .popup-numberVotes .popup-accent::after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.c-popup {
+  /*check or radio*/ }
+  .c-popup_label {
+    text-align: left;
+    display: block;
+    padding: 6px;
+    border: 1px solid #818181;
+    border-radius: 4px;
+    padding-left: 25px;
+    position: relative;
+    color: #1c3344;
+    font-size: 12px;
+    margin-bottom: 10px; }
+    .c-popup_label:last-child {
+      margin-bottom: 0; }
+    .c-popup_label::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 1px solid #818181;
+      background-color: #dedede; }
+  .c-popup_radio {
+    display: none; }
+  .c-popup-card_title-img {
+    margin-bottom: 9px; }
+  .c-popup-card_title-text {
+    font-size: 18px;
+    color: #1c3344;
+    display: inline-block;
+    padding: 14px 0;
+    vertical-align: top; }
 
 .plate {
   position: relative;
