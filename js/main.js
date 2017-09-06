@@ -51,7 +51,7 @@ $("body").on("click", ".file-button_remove", function (e) {
 
 
     //добавление буквы с помощью кнопок
-    /*function addLetter (){
+    function addLetter (){
         $(".accent-letter_add-letter").click(function(e){
             var count = $(this).parents(".accent-letter_btn-box").siblings(".accent-letter_list").find(".accent-letter_item").length + 1;
             var countBox = $(".accent-letter_box").length;
@@ -70,7 +70,7 @@ $("body").on("click", ".file-button_remove", function (e) {
             });
         });
     }
-    addLetter();*/
+    addLetter();
     //добавление буквы с помощью клавиш
     var countDefault;
     $('.accent-letter_item').each(function(index, elem){
@@ -143,17 +143,17 @@ $("body").on("click", ".file-button_remove", function (e) {
 
 
     // удаление буквы с помощью кнопок
-    // function removeLetter (){
-    //     $(".accent-letter_remove-letter").click(function(e){
-    //         e.preventDefault();
-    //         $(this).parents(".accent-letter_btn-box").siblings(".accent-letter_list").find(".accent-letter_item:last-child").remove();
-    //     });
-    // }
-    // removeLetter();
+    function removeLetter (){
+        $(".accent-letter_remove-letter").click(function(e){
+            e.preventDefault();
+            $(this).parents(".accent-letter_btn-box").siblings(".accent-letter_list").find(".accent-letter_item:last-child").remove();
+        });
+    }
+    removeLetter();
 
     //удаление буквы с помощью клавиши Backspace
     function removeLetterSpace (){
-      $('.accent-letter_input').on('keyup',function(eventObject){
+      $(document).on('keyup', '.accent-letter_input', function(eventObject){
         if(eventObject.which == 8) {
           $(".accent-letter_list").find(".accent-letter_item:last-child").remove()
           $(".accent-letter_list").find(".accent-letter_item:last-child").find('.accent-letter_input').focus();
@@ -499,6 +499,40 @@ $('.works-control').on('click', function(e){
   console.log('добавляетсяется класс актив');
   $(this).siblings().removeClass('active');
   $(this).addClass('active');
+});
+
+$('.SlectBox').SumoSelect();
+
+$(".btn-votes").click(function(event) {
+    console.log("ghbdtn");
+    event.preventDefault();
+    $('.popup_bg').toggleClass('is-visible');
+    $(".popup-numberVotes").parents('.popup_container').toggleClass('popup_show');
+    $(".popup-numberVotes").toggleClass('popup_show');
+    $('body').toggleClass('body-popup');
+});
+
+$(".popup-close").click(function(event) {
+    event.preventDefault();
+    $(this).parents('.popup-numberVotes').toggleClass('popup_show');
+    $('.popup_bg').toggleClass('is-visible');
+    $(this).parents('.popup_container').toggleClass('popup_show');
+    $('body').toggleClass('body-popup');
+});
+
+$(".section-numberVotes_type input[type='checkbox'] + .c-label ").on('click', function(){
+  $(this).closest('.grid_column').toggleClass('grid_column-active');
+});
+
+$(".section-numberVotes_type input[type='checkbox']").on('change', function(){
+    var chk = $('.section-numberVotes_type').find('input[type=checkbox]:checked').length;
+    console.log(chk);
+    // if($('#entity_confirmation-stock').prop('checked') && $('#entity_confirmation-data').prop('checked') && $('#entity_confirmation-pact').prop('checked')){
+    if(chk == 3){
+        $(".section-numberVotes_type .grid_column-numberVotes .grid_column").addClass('grid_column-disabled');
+    }else {
+        $(".section-numberVotes_type .grid_column-numberVotes .grid_column").removeClass('grid_column-disabled');
+    }
 });
 
 });//окончание ready

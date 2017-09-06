@@ -11,6 +11,8 @@
 
   <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css"/>
   <!--<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>-->
+  <link rel="stylesheet" type="text/css" href="css/sumoselect.css"/>
+  <link rel="stylesheet" type="text/css" href="js/jquery.arcticmodal-0.3/themes/simple.css"/>
   <link rel="stylesheet" type="text/css" href="css/examples.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
@@ -22,14 +24,14 @@
   <!--<script src="js/jquery.stickybox.js"></script>-->
   <script src="js/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js"></script>
   <script src="js/mouseweel.js"></script>
+  <script src="js/jquery.sumoselect.js"></script>
   <!-- filter -->
   <script src="js/isotope.pkgd.min.js"></script>
   <script src="js/filter.js"></script>
 
+  <script src="js/jquery.arcticmodal-0.3/jquery.arcticmodal-0.3.min.js"></script>
 
-  <script type="text/javascript">
 
-  </script>
 
   <script src="js/main.js"></script>
 
@@ -384,57 +386,165 @@
             <label class="c-label" for="numberVotes-3">3</label>
           </div>
         </div><!--end grid-->
-        <h2 class="section_title">Тип голоса</h2>
-        <div class="grid">
-          <div class="grid_column">
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label" for="votes-man-speaker">Мужской</label>
+        <div class="section-numberVotes_type">
+          <h2 class="section_title">Тип голоса</h2>
+          <div class="grid">
+            <div class="grid_column grid_column-numberVotes">
+              <div class="grid">
+                <div class="grid_column">
+                  <div class="grid_item">
+                    <input type="checkbox" id="votes-man-speaker-1" name="musical-direction">
+                    <label class="c-label" for="votes-man-speaker-1">Мужской</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-1-15" name="musical-subdirection-1">
+                    <label class="c-label--small" for="votes-man-speaker-1-15">Детский (5-15)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-1-20" name="musical-subdirection-1">
+                    <label class="c-label--small" for="votes-man-speaker-1-20">Молодой (15-20)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-1-35" name="musical-subdirection-1">
+                    <label class="c-label--small" for="votes-man-speaker-1-35">Средний (25-35)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-1-35more" name="musical-subdirection-1">
+                    <label class="c-label--small" for="votes-man-speaker-1-35more">Взрослый (<span class="c-label--icon">&#8593;</span>35)</label>
+                  </div>
+                  <a href="#" class="btn-votes">Список голосов</a>
+                  <div class="votes-result">Мужской голос <span>1</span></div>
+                </div><!--end grid_column-->
+                <div class="grid_column">
+                  <div class="grid_item">
+                    <input type="checkbox" id="votes-man-speaker-2" name="musical-direction">
+                    <label class="c-label" for="votes-man-speaker-2">Мужской</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-2-15" name="musical-subdirection-2">
+                    <label class="c-label--small" for="votes-man-speaker-2-15">Детский (5-15)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-2-20" name="musical-subdirection-2">
+                    <label class="c-label--small" for="votes-man-speaker-2-20">Молодой (15-20)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-2-35" name="musical-subdirection-2">
+                    <label class="c-label--small" for="votes-man-speaker-2-35">Средний (25-35)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-2-35more" name="musical-subdirection-2">
+                    <label class="c-label--small" for="votes-man-speaker-2-35more">Взрослый (<span class="c-label--icon">&#8593;</span>35)</label>
+                  </div>
+                  <a href="#" class="btn-votes">Список голосов</a>
+                  <div class="votes-result">Мужской голос <span>14</span></div>
+                </div><!--end grid_column-->
+                <div class="grid_column">
+                  <div class="grid_item">
+                    <input type="checkbox" id="votes-man-speaker-3" name="musical-direction">
+                    <label class="c-label" for="votes-man-speaker-3">Мужской</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-3-15" name="musical-subdirection-3">
+                    <label class="c-label--small" for="votes-man-speaker-3-15">Детский (5-15)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-3-20" name="musical-subdirection-3">
+                    <label class="c-label--small" for="votes-man-speaker-3-20">Молодой (15-20)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-3-35" name="musical-subdirection-3">
+                    <label class="c-label--small" for="votes-man-speaker-3-35">Средний (25-35)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-man-speaker-3-35more" name="musical-subdirection-3">
+                    <label class="c-label--small" for="votes-man-speaker-3-35more">Взрослый (<span class="c-label--icon">&#8593;</span>35)</label>
+                  </div>
+                  <a href="#" class="btn-votes">Список голосов</a>
+                  <div class="votes-result">Мужской голос <span>4</span></div>
+                </div><!--end grid_column-->
+              </div><!-- end grid -->
             </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Детский (5-15)</label>
+            <div class="grid_column grid_column-numberVotes">
+              <div class="grid">
+                <div class="grid_column">
+                  <div class="grid_item">
+                    <input type="checkbox" id="votes-woman-speaker-1" name="musical-direction">
+                    <label class="c-label" for="votes-woman-speaker-1">Женский</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-1-15" name="musical-woman-subdirection-1">
+                    <label class="c-label--small" for="votes-woman-speaker-1-15">Детский (5-15)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-1-20" name="musical-woman-subdirection-1">
+                    <label class="c-label--small" for="votes-woman-speaker-1-20">Молодой (15-20)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-1-35" name="musical-woman-subdirection-1">
+                    <label class="c-label--small" for="votes-woman-speaker-1-35">Средний (25-35)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-1-35more" name="musical-woman-subdirection-1">
+                    <label class="c-label--small" for="votes-woman-speaker-1-35more">Взрослый (<span class="c-label--icon">&#8593;</span>35)</label>
+                  </div>
+                  <a href="#" class="btn-votes">Список голосов</a>
+                  <div class="votes-result">Женский голос <span>1</span></div>
+                </div><!--end grid_column-->
+                <div class="grid_column">
+                  <div class="grid_item">
+                    <input type="checkbox" id="votes-woman-speaker-2" name="musical-direction">
+                    <label class="c-label" for="votes-woman-speaker-2">Женский</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-2-15" name="musical-woman-subdirection-2">
+                    <label class="c-label--small" for="votes-woman-speaker-2-15">Детский (5-15)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-2-20" name="musical-woman-subdirection-2">
+                    <label class="c-label--small" for="votes-woman-speaker-2-20">Молодой (15-20)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-2-35" name="musical-woman-subdirection-2">
+                    <label class="c-label--small" for="votes-woman-speaker-2-35">Средний (25-35)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-2-35more" name="musical-woman-subdirection-2">
+                    <label class="c-label--small" for="votes-woman-speaker-2-35more">Взрослый (<span class="c-label--icon">&#8593;</span>35)</label>
+                  </div>
+                  <a href="#" class="btn-votes">Список голосов</a>
+                  <div class="votes-result">Женский голос <span>14</span></div>
+                </div><!--end grid_column-->
+                <div class="grid_column">
+                  <div class="grid_item">
+                    <input type="checkbox" id="votes-woman-speaker-3" name="musical-direction">
+                    <label class="c-label" for="votes-woman-speaker-3">Женский</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-3-15" name="musical-woman-subdirection-3">
+                    <label class="c-label--small" for="votes-woman-speaker-3-15">Детский (5-15)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-3-20" name="musical-woman-subdirection-3">
+                    <label class="c-label--small" for="votes-woman-speaker-3-20">Молодой (15-20)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-3-35" name="musical-woman-subdirection-3">
+                    <label class="c-label--small" for="votes-woman-speaker-3-35">Средний (25-35)</label>
+                  </div>
+                  <div class="grid_item">
+                    <input type="radio" id="votes-woman-speaker-3-35more" name="musical-woman-subdirection-3">
+                    <label class="c-label--small" for="votes-woman-speaker-3-35more">Взрослый (<span class="c-label--icon">&#8593;</span>35)</label>
+                  </div>
+                  <a href="#" class="btn-votes">Список голосов</a>
+                  <div class="votes-result">Женский голос <span>4</span></div>
+                </div><!--end grid_column-->
+              </div><!-- end grid -->
             </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Молодой (15-20)</label>
-            </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Средний (25-35)</label>
-            </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Взрослый (35 и выше)</label>
-            </div>
-            <a href="#" class="btn-votes">Список голосов</a>
-            <div class="votes-result">Мужской голос <span>1</span></div>
-          </div><!--end grid_column-->
-          <div class="grid_column">
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label" for="votes-man-speaker">Мужской</label>
-            </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Детский (5-15)</label>
-            </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Молодой (15-20)</label>
-            </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Средний (25-35)</label>
-            </div>
-            <div class="grid_item">
-              <input type="checkbox" id="votes-man-speaker" name="musical-direction">
-              <label class="c-label--small" for="votes-man-speaker">Взрослый (35 и выше)</label>
-            </div>
-            <a href="#" class="btn-votes">Список голосов</a>
-            <div class="votes-result">Мужской голос <span>1</span></div>
           </div>
-        </div><!-- end grid -->
+        </div>
+
+
 
       </div><!--end slide-chronometry-->
     </div><!--end container-layout-->
@@ -901,6 +1011,8 @@
         <div class="l-slide-accent">
           <div class="accent-letter accent-letter_box">
             <div class="accent-letter_list">
+              <!-- <div class="accent-letter_list-pseudo">
+              </div> -->
               <div class="accent-letter_item">
                 <input id="accent-letter_radio-11" type="radio" name="accent1">
                 <label for="accent-letter_radio-11" class="accent-letter_radio"></label>
@@ -1109,7 +1221,13 @@
 
 </div>
 
-<div class="popup popup-numberVotes">
+
+<div class="popup_container">
+	<table class="popup_container-2">
+		<tr>
+			<td class="popup_container-3">
+				<!--new pop-up-->
+          <div class="popup popup-numberVotes">
   <div class="popup-header">
     <img class="popup-header_icon" src="img/icon-popup-votes.png" alt="">
     <h3 class="popup-header_title">Выбор голоса</h3>
@@ -1130,12 +1248,12 @@
                   <div class="c-popup-card_title-text">Мужской</div>
                 </div>
                 <div class="c-popup-card_body">
-                  <input class="c-popup_radio" type="radio" id="" name="vote-type-man">
-                  <label class="c-popup_label">Молодой (до 25 лет)</label>
-                  <input class="c-popup_label" class="c-popup_radio" type="radio" id="" name="vote-type-man">
-                  <label class="c-popup_label">Средний (до 35 лет)</label>
-                  <input class="c-popup_radio" type="radio" id="" name="vote-type-man">
-                  <label class="c-popup_label">Взрослый (до 55 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="vote-type-man-25" name="vote-type">
+                  <label class="c-popup_label" for="vote-type-man-25">Молодой (до 25 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="vote-type-man-35" name="vote-type" checked>
+                  <label class="c-popup_label" for="vote-type-man-35">Средний (до 35 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="vote-type-man-55" name="vote-type">
+                  <label class="c-popup_label" for="vote-type-man-55">Взрослый (до 55 лет)</label>
                 </div>
               </div>
             </div>
@@ -1146,12 +1264,12 @@
                   <div class="c-popup-card_title-text">Женский</div>
                 </div>
                 <div class="c-popup-card_body">
-                  <input class="c-popup_radio" type="radio" id="" name="vote-type-woman">
-                  <label class="c-popup_label">Молодой (до 25 лет)</label>
-                  <input class="c-popup_label" class="c-popup_radio" type="radio" id="" name="vote-type-woman">
-                  <label class="c-popup_label">Средний (до 35 лет)</label>
-                  <input class="c-popup_radio" type="radio" id="" name="vote-type-woman">
-                  <label class="c-popup_label">Взрослый (до 55 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="vote-type-woman-25" name="vote-type">
+                  <label class="c-popup_label" for="vote-type-woman-25">Молодой (до 25 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="vote-type-woman-35" name="vote-type">
+                  <label class="c-popup_label" for="vote-type-woman-35">Средний (до 35 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="vote-type-woman-55" name="vote-type">
+                  <label class="c-popup_label" for="vote-type-woman-55">Взрослый (до 55 лет)</label>
                 </div>
               </div>
             </div>
@@ -1162,8 +1280,8 @@
                   <div class="c-popup-card_title-text">Детский</div>
                 </div>
                 <div class="c-popup-card_body">
-                  <input class="c-popup_radio" type="radio" id="" name="vote-type-children">
-                  <label class="c-popup_label">Десткий (до 15 лет)</label>
+                  <input class="c-popup_radio" type="radio" id="vote-type-children" name="vote-type">
+                  <label class="c-popup_label" for="vote-type-children">Десткий (до 15 лет)</label>
                 </div>
               </div>
             </div>
@@ -1172,14 +1290,14 @@
     </div>
     <div class="popup-box popup-lang">
       <div class="popup-box_header">
-        <div class="popup-box_title">Язык</div>
+        <div class="popup-box_title">Язык <span>(диктор носитель языка)</span></div>
       </div>
       <div class="popup-box_body">
         <div class="popup-row">
           <div class="popup-col-2">
             <div class="c-popup-card">
               <div class="c-popup-card_body">
-                <input class="c-popup_radio" type="radio" id="vote-lang-rus" name="vote-lang">
+                <input class="c-popup_radio" type="radio" id="vote-lang-rus" name="vote-lang" checked>
                 <label class="c-popup_label" for="vote-lang-rus">Русский</label>
                 <input class="c-popup_radio" type="radio" id="vote-lang-eng" name="vote-lang">
                 <label class="c-popup_label" for="vote-lang-eng">Английский</label>
@@ -1211,11 +1329,26 @@
       </div>
       <div class="popup-box_body">
         <div class="popup-col-accent">
-          <input class="c-popup_radio" type="radio" id="vote-lang-es" name="vote-lang">
-          <label class="c-popup_label" for="vote-lang-es">Без акцента</label>
+          <input class="c-popup_radio" type="radio" id="vote-accent" name="vote-accent">
+          <label class="c-popup_label" for="vote-accent">Без акцента</label>
         </div>
         <div class="popup-col-accent">
           <!-- мульти селект -->
+          <div class="popup-select">
+              <div class="popup-select_title">Акцент: </div>
+              <select class="SlectBox" placeholder="Выберите пункт">
+                  <option value="Индия">Индия</option>
+                  <option value="Скандинавский">Скандинавский</option>
+                  <option value="Китай">Китай</option>
+                  <option value="Кавказ">Кавказ</option>
+                  <option value="Япония">Япония</option>
+                  <option value="Бразилия">Бразилия</option>
+                  <option value="Африка">Африка</option>
+                  <option value="Европа">Европа</option>
+                  <option value="Русская народная">Русская народная</option>
+                  <option value="Еврейский народные мотивы">Еврейский народные мотивы</option>
+              </select>
+          </div>
 
         </div>
       </div>
@@ -1307,11 +1440,21 @@
     <button class="popup-btn">Готово</button>
   </div>
 </div>
+      </td>
+		</tr>
+	</table>
+</div>
+
+<!--задний фон модального окна-->
+<div class="popup_bg"></div>
 <!--<script src="js/main.js"></script>-->
+
+
+
 <script type="text/javascript">
   $(document).ready(function () {
 
-    $('.audio-player').each(function() {
+    $('.popup .audio-player').each(function() {
       var source = $(this).attr('src');
       if ( source != '' ) {
         $(this).after('<a href="' + source + '" class="audio-download">Скачать</a>');
@@ -1324,6 +1467,9 @@
       audioVolume: 'horizontal',
       audioHeight: 30
     });
+
+    // $('.box-modal_close')
+
 
 
 

@@ -184,12 +184,16 @@
 
     &_list {
       display: inline-block;
+        min-width: 300px;
+        background: url(../img/accent-pseudo.png) 0 0 no-repeat;
+        text-align: left;
     }
 
     &_item {
       display: inline-block;
       text-align: center;
       margin: 0 2px;
+
     }
 
     .accent-letter_radio {
@@ -237,7 +241,7 @@
       box-shadow: 0.5px 0.9px 2px rgba(68, 32, 4, 0.15);
       color: #ED3C0C;
       font-size: 50px;
-      font-weight: 800;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -699,6 +703,59 @@
     font: 600 14px/1em $font-text;
     text-align: center;
   }
+
+}
+
+.section-numberVotes_type {
+  .grid_column {
+    width: 33.3333%;
+  }
+
+  .grid_column-numberVotes {
+    width: 50%;
+    float: left;
+    padding: 0;
+  }
+
+  .c-label {
+    font-size: 16px;
+  }
+  .c-label::before {
+    content: '';
+    margin-right: 8px;
+  }
+
+  .c-label--small {
+    font-size: 13px;
+    vertical-align: top;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+
+    span.c-label--icon {
+      position:relative;
+      top: -1px;
+      font-size:16px;
+      margin-right: 1px;
+    }
+  }
+
+  input[type=radio]:checked + .c-label--small {
+    opacity: 1;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+  }
+
+  .c-label--small::before {
+    content: '';
+    margin-right: 4px;
+  }
+
 }
 
 //slide-votes

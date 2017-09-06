@@ -25,7 +25,7 @@
     width: 43%;
   }
 
-  
+
   .section-numberVotes .section_img img {
     width: 56%;
   }
@@ -51,7 +51,8 @@
   #style .c-arrow-down,
   #incidental .c-arrow-down,
   #accent .c-arrow-down,
-  #law .c-arrow-down {
+  #law .c-arrow-down,
+  #numberVotes .c-arrow-down {
     position: relative;
     display: block;
     margin: 0 auto;
@@ -66,7 +67,8 @@
   .slide-accent,
   .slide-law,
   .slide-output,
-  .slide-form-style {
+  .slide-form-style,
+  .slide-numberVotes {
     position: static;
     transform: none;
   }
@@ -121,6 +123,27 @@
   //   margin-bottom: 10px;
   //   left: auto;
   // }
+
+  .section-numberVotes_type .grid_column-numberVotes {
+    float: none;
+    width: 96%;
+  }
+
+  .popup_container {
+    right: 35px;
+  }
+
+  .popup {
+    width: 100%;
+  }
+
+  .popup-numberVotes .popup-type,
+  .popup-numberVotes .popup-lang,
+  .popup-numberVotes .popup-accent {
+    max-height: none;
+    float: none;
+    width: 100%;
+  }
 }
 
 
@@ -358,6 +381,18 @@
   .works-main {
     padding-top: 30px;
   }
+
+  /*плееер в попапе*/
+  .popup .works_item {
+    margin: 0;
+  }
+  .popup .c-card-works_item {
+    width: 100%;
+  }
+
+  .popup .c-card-works {
+    margin-bottom: 10px;
+  }
 }
 
 
@@ -385,6 +420,7 @@
   }
 
   .slide-incidental .grid_column,
+  .slide-votes  .grid_column,
   .section-law .grid_column {
     width: 100% !important;
     display: block;
@@ -395,6 +431,8 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+
 
   .slide-output {
     width: 100%;
@@ -443,11 +481,20 @@
   .works-footer .footer-menu_item:first-child .footer-menu_link {
     padding-left: 8px;
   }
+
+  .section-numberVotes_type .grid_column {
+    width: 100%;
+    float: none;
+  }
 }
 
 @media all and (max-width: 750px) {
   .works_item {
     margin: 0;
+  }
+  .popup-col-3 {
+    float: none;
+    width: 100%;
   }
 }
 
@@ -470,6 +517,17 @@
     width: 54vw !important;
   }
 
+  .popup .c-card-works .mejs__controls .mejs__time-rail {
+    width: 23vw !important;
+  }
+
+  .popup .player-layout_title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 155px;
+  }
+
 }
 
 @media all and (max-width: 570px) {
@@ -482,6 +540,24 @@
   .contact-main_list {
     width: auto;
   }
+
+  .popup-col-2 {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .popup-col-accent {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .popup-select,
+  .SumoSelect {
+    width: 100%;
+  }
+
+
 }
 
 @media all and (max-height: 900px) {
@@ -519,7 +595,7 @@
   }
 
   .section_title {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
   }
 
   .section-form-style .load-style_upload {
@@ -580,10 +656,44 @@
   .c-card-works .mejs__controls .mejs__time-rail {
     width: 40vw !important;
   }
+
+
+    .popup_container-2 {
+      width: 94%;
+      display: block;
+    }
+    .popup_container-3,
+    .popup_container tbody,
+    .popup_container tr {
+      padding: 0;
+      display: block;
+      width: 100%;
+    }
+
+    .popup_container {
+      right: -32px;
+      left: -14px;
+
+    }
+}
+
+@media all and (max-width: 415px) {
+  .plate {
+    width: 100%;
+    height: 86vw;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
 }
 
 @media all and (max-width: 380px) {
   .c-card-works .mejs__controls .mejs__time-rail {
     width: 30vw !important;
+  }
+}
+
+@media all and (max-width: 340px) {
+  .section_title {
+    font-size: 1.6em !important;
   }
 }
