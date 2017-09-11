@@ -1381,7 +1381,7 @@ input[type=checkbox]:checked + .c-label_calc::after {
 
 .section-votes {
   background-color: #6ecc08;
-  background: url("../img/slide-votes.jpg") 0 0 no-repeat;
+  background: url("../img/slide-votes-bg.jpg") 0 0 no-repeat;
   background-size: cover; }
   .section-votes .c-arrow-down {
     position: relative;
