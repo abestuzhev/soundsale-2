@@ -162,3 +162,13 @@ function initFilters() {
 }
 
 initFilters();
+
+
+/*переключение верхних табов*/
+ $(document).ready(function(){
+   $('.works-control_link').on('click', function(e){
+     e.preventDefault();
+     $(this).closest('.works-control').siblings().removeClass('active');
+     $(this).closest('.works-control').addClass('active');
+   });
+ });

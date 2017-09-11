@@ -494,13 +494,6 @@ $(".text-entry_button").on("click", function(e){
 //окончание счетчик букв
 
 
-$('.works-control').on('click', function(e){
-  e.preventDefault();
-  console.log('добавляетсяется класс актив');
-  $(this).siblings().removeClass('active');
-  $(this).addClass('active');
-});
-
 $('.SlectBox').SumoSelect();
 
 $(".btn-votes").click(function(event) {
